@@ -190,6 +190,9 @@
   },
   "active": "f05a0cba5334872c",
   "lastOpenFiles": [
+    "notebooks/02_amharic_preprocessing_and_pipeline.ipynb",
+    "docs/RESULTS_AND_ANALYSIS.md",
+    "notebooks/03_amharic_model_comparison_and_benchmarks.ipynb",
     "docs/DATASET_DOCUMENTATION.md"
   ]
 }
