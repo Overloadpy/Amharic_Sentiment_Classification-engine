@@ -21,10 +21,12 @@ from .threshold import ThresholdConfig, classify_sentiment
 
 def _resolve_default_model() -> str:
     """Resolve default model checkpoint path prioritizing local cached weights."""
+    pkg_root = Path(__file__).resolve().parent.parent
     local_candidates = [
-        Path("models/tirsit-afriberta"),
-        Path("models/Tirsit⁄amharic-sentiment-afriberta"),
-        Path("/home/igi/Desktop/amh-synthesis/models/Tirsit⁄amharic-sentiment-afriberta"),
+        pkg_root / "models" / "tirsit-afriberta",
+        pkg_root / "models" / "Tirsit⁄amharic-sentiment-afriberta",
+        Path("models/tirsit-afriberta").resolve(),
+        Path("models/Tirsit⁄amharic-sentiment-afriberta").resolve(),
     ]
     for c in local_candidates:
         if c.exists() and (c / "config.json").exists():
