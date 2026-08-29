@@ -1,0 +1,51 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 26,
+    "filesWithImports": 6,
+    "totalEdges": 9
+  },
+  "importMap": {
+    ".agy/autopilot/state.json": [],
+    ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md": [],
+    ".agy/plans/ralplan-amharic-sentiment-consensus.json": [],
+    ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md": [],
+    ".agy/qa/ultraqa-amharic-sentiment-verdict.json": [],
+    ".agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md": [],
+    ".agy/reviews/code-review-amharic-sentiment-verdict.json": [],
+    ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md": [],
+    ".agy/ultragoal/amharic-sentiment/brief.md": [],
+    ".agy/ultragoal/amharic-sentiment/handoff.json": [],
+    ".agy/ultragoal/amharic-sentiment/ledger.jsonl": [],
+    ".agy/ultragoal/amharic-sentiment/progress.md": [],
+    ".agy/ultragoal/amharic-sentiment/status.json": [],
+    "AUTOPILOT_INSTRUCTIONS.md": [],
+    "README.md": [],
+    "cli.py": [
+      "src/engine.py"
+    ],
+    "requirements.txt": [],
+    "src/__init__.py": [
+      "src/engine.py",
+      "src/preprocessor.py",
+      "src/threshold.py"
+    ],
+    "src/engine.py": [
+      "src/preprocessor.py",
+      "src/threshold.py"
+    ],
+    "src/preprocessor.py": [],
+    "src/threshold.py": [],
+    "tests/__init__.py": [],
+    "tests/benchmark_cases.json": [],
+    "tests/test_engine.py": [
+      "src/engine.py"
+    ],
+    "tests/test_preprocessor.py": [
+      "src/preprocessor.py"
+    ],
+    "tests/test_threshold.py": [
+      "src/threshold.py"
+    ]
+  }
+}

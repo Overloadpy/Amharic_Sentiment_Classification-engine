@@ -1,0 +1,622 @@
+const fs = require("fs");
+
+const batch1 = {
+  "nodes": [
+    {
+      "id": "file:cli.py",
+      "type": "file",
+      "name": "cli.py",
+      "filePath": "cli.py",
+      "summary": "CLI test harness built with Typer and Rich providing single-shot text analysis, interactive REPL, and automated golden benchmark evaluation.",
+      "tags": ["entry-point", "cli", "test-harness", "repl", "benchmark"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:cli.py:get_engine",
+      "type": "function",
+      "name": "get_engine",
+      "filePath": "cli.py",
+      "lineRange": [31, 37],
+      "summary": "Initializes and caches the singleton instance of SentimentInferenceEngine.",
+      "tags": ["singleton", "factory", "initialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:cli.py:get_class_color",
+      "type": "function",
+      "name": "get_class_color",
+      "filePath": "cli.py",
+      "lineRange": [40, 48],
+      "summary": "Maps sentiment classification labels to Rich terminal styling colors.",
+      "tags": ["utility", "styling", "ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:cli.py:analyze",
+      "type": "function",
+      "name": "analyze",
+      "filePath": "cli.py",
+      "lineRange": [52, 77],
+      "summary": "CLI command to perform single-shot sentiment inference on Amharic text and display formatted results.",
+      "tags": ["api-handler", "cli", "inference"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:cli.py:repl",
+      "type": "function",
+      "name": "repl",
+      "filePath": "cli.py",
+      "lineRange": [81, 117],
+      "summary": "Interactive terminal REPL loop for real-time sentiment analysis queries.",
+      "tags": ["repl", "cli", "interactive"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:cli.py:benchmark",
+      "type": "function",
+      "name": "benchmark",
+      "filePath": "cli.py",
+      "lineRange": [121, 206],
+      "summary": "Evaluates sentiment engine accuracy and latency against test benchmark cases dataset.",
+      "tags": ["benchmark", "evaluation", "testing"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/engine.py",
+      "type": "file",
+      "name": "engine.py",
+      "filePath": "src/engine.py",
+      "summary": "Inference engine orchestrating Afro-centric transformer representations, clause extraction, orthographic preprocessing, and dual-axis thresholding.",
+      "tags": ["inference-engine", "nlp", "transformers", "sentiment-analysis"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "class",
+      "name": "SentimentInferenceEngine",
+      "filePath": "src/engine.py",
+      "lineRange": [20, 198],
+      "summary": "Main sentiment classification engine handling model weights loading, clause-level inference, and latency measurement.",
+      "tags": ["transformer", "model-inference", "nlp"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:tests/test_engine.py",
+      "type": "file",
+      "name": "test_engine.py",
+      "filePath": "tests/test_engine.py",
+      "summary": "Pytest test suite verifying engine initialization, prediction output structure, and the 10 Golden Benchmark cases.",
+      "tags": ["test", "integration-test", "benchmark-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_engine.py:test_engine_output_format",
+      "type": "function",
+      "name": "test_engine_output_format",
+      "filePath": "tests/test_engine.py",
+      "lineRange": [16, 32],
+      "summary": "Verifies dictionary keys, probability bounds, and output structure from engine predictions.",
+      "tags": ["test", "unit-test", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_engine.py:test_empty_input",
+      "type": "function",
+      "name": "test_empty_input",
+      "filePath": "tests/test_engine.py",
+      "lineRange": [35, 41],
+      "summary": "Tests engine behavior when handling empty strings and edge-case inputs.",
+      "tags": ["test", "unit-test", "edge-case"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_engine.py:test_all_10_golden_benchmark_cases",
+      "type": "function",
+      "name": "test_all_10_golden_benchmark_cases",
+      "filePath": "tests/test_engine.py",
+      "lineRange": [44, 74],
+      "summary": "Validates prediction accuracy across the complete suite of 10 golden benchmark cases.",
+      "tags": ["test", "benchmark-test", "accuracy"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    { "source": "file:cli.py", "target": "function:cli.py:get_engine", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "function:cli.py:get_class_color", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "function:cli.py:analyze", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "function:cli.py:repl", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "function:cli.py:benchmark", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "function:cli.py:get_engine", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:cli.py", "target": "function:cli.py:get_class_color", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:cli.py", "target": "function:cli.py:analyze", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:cli.py", "target": "function:cli.py:repl", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:cli.py", "target": "function:cli.py:benchmark", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:src/engine.py", "target": "class:src/engine.py:SentimentInferenceEngine", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:src/engine.py", "target": "class:src/engine.py:SentimentInferenceEngine", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:tests/test_engine.py", "target": "function:tests/test_engine.py:test_engine_output_format", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_engine.py", "target": "function:tests/test_engine.py:test_empty_input", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_engine.py", "target": "function:tests/test_engine.py:test_all_10_golden_benchmark_cases", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:cli.py", "target": "file:src/engine.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/engine.py", "target": "file:src/preprocessor.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/engine.py", "target": "file:src/threshold.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:tests/test_engine.py", "target": "file:src/engine.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/engine.py", "target": "file:tests/test_engine.py", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "function:cli.py:get_engine", "target": "class:src/engine.py:SentimentInferenceEngine", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:cli.py:analyze", "target": "function:cli.py:get_engine", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:cli.py:repl", "target": "function:cli.py:get_engine", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:cli.py:benchmark", "target": "function:cli.py:get_engine", "type": "calls", "direction": "forward", "weight": 0.8 }
+  ]
+};
+
+const batch2 = {
+  "nodes": [
+    {
+      "id": "file:src/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/__init__.py",
+      "summary": "Package initialization file exposing core engine, preprocessor, and thresholding components.",
+      "tags": ["entry-point", "barrel", "package-root"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/threshold.py",
+      "type": "file",
+      "name": "threshold.py",
+      "filePath": "src/threshold.py",
+      "summary": "Continuous decoupled dual-axis calibration mathematics classifying positive, negative, neutral, and mixed sentiments.",
+      "tags": ["math", "calibration", "thresholding", "decision-logic"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/threshold.py:ThresholdConfig",
+      "type": "class",
+      "name": "ThresholdConfig",
+      "filePath": "src/threshold.py",
+      "lineRange": [16, 20],
+      "summary": "Dataclass holding calibration hyperparameters (tau_act, delta_mix, delta_dom).",
+      "tags": ["config", "dataclass", "hyperparameters"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:src/threshold.py:SentimentResult",
+      "type": "class",
+      "name": "SentimentResult",
+      "filePath": "src/threshold.py",
+      "lineRange": [24, 37],
+      "summary": "Container representing final classification label, confidence score, and raw polarities.",
+      "tags": ["data-model", "dataclass", "result"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/threshold.py:classify_sentiment",
+      "type": "function",
+      "name": "classify_sentiment",
+      "filePath": "src/threshold.py",
+      "lineRange": [40, 116],
+      "summary": "Calculates categorical sentiment classification and normalized confidence from positive and negative activation probabilities.",
+      "tags": ["decision-logic", "calibration", "math"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_threshold.py",
+      "type": "file",
+      "name": "test_threshold.py",
+      "filePath": "tests/test_threshold.py",
+      "summary": "Pytest suite verifying mathematical correctness of dual-axis thresholding, dominance rules, and mixed/neutral conditions.",
+      "tags": ["test", "unit-test", "calibration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_threshold.py:test_positive_dominance",
+      "type": "function",
+      "name": "test_positive_dominance",
+      "filePath": "tests/test_threshold.py",
+      "lineRange": [7, 14],
+      "summary": "Validates positive polarity dominance formula and confidence calculation.",
+      "tags": ["test", "unit-test", "math"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_threshold.py:test_negative_dominance",
+      "type": "function",
+      "name": "test_negative_dominance",
+      "filePath": "tests/test_threshold.py",
+      "lineRange": [17, 22],
+      "summary": "Validates negative polarity dominance formula and confidence calculation.",
+      "tags": ["test", "unit-test", "math"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_threshold.py:test_neutral_condition",
+      "type": "function",
+      "name": "test_neutral_condition",
+      "filePath": "tests/test_threshold.py",
+      "lineRange": [25, 31],
+      "summary": "Validates neutral activation thresholding and confidence calculation.",
+      "tags": ["test", "unit-test", "math"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_threshold.py:test_mixed_condition",
+      "type": "function",
+      "name": "test_mixed_condition",
+      "filePath": "tests/test_threshold.py",
+      "lineRange": [34, 40],
+      "summary": "Validates mixed sentiment detection when both polarities are active within margin.",
+      "tags": ["test", "unit-test", "math"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_threshold.py:test_custom_config",
+      "type": "function",
+      "name": "test_custom_config",
+      "filePath": "tests/test_threshold.py",
+      "lineRange": [43, 47],
+      "summary": "Verifies threshold calculation behavior under non-default configuration parameters.",
+      "tags": ["test", "unit-test", "configuration"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:src/__init__.py", "target": "file:src/engine.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/__init__.py", "target": "file:src/preprocessor.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/__init__.py", "target": "file:src/threshold.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/threshold.py", "target": "class:src/threshold.py:ThresholdConfig", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:src/threshold.py", "target": "class:src/threshold.py:SentimentResult", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:src/threshold.py", "target": "function:src/threshold.py:classify_sentiment", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:src/threshold.py", "target": "class:src/threshold.py:ThresholdConfig", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:src/threshold.py", "target": "class:src/threshold.py:SentimentResult", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:src/threshold.py", "target": "function:src/threshold.py:classify_sentiment", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:tests/test_threshold.py", "target": "function:tests/test_threshold.py:test_positive_dominance", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_threshold.py", "target": "function:tests/test_threshold.py:test_negative_dominance", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_threshold.py", "target": "function:tests/test_threshold.py:test_neutral_condition", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_threshold.py", "target": "function:tests/test_threshold.py:test_mixed_condition", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_threshold.py", "target": "function:tests/test_threshold.py:test_custom_config", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_threshold.py", "target": "file:src/threshold.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/threshold.py", "target": "file:tests/test_threshold.py", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "function:tests/test_threshold.py:test_positive_dominance", "target": "function:src/threshold.py:classify_sentiment", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_threshold.py:test_negative_dominance", "target": "function:src/threshold.py:classify_sentiment", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_threshold.py:test_neutral_condition", "target": "function:src/threshold.py:classify_sentiment", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_threshold.py:test_mixed_condition", "target": "function:src/threshold.py:classify_sentiment", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_threshold.py:test_custom_config", "target": "function:src/threshold.py:classify_sentiment", "type": "calls", "direction": "forward", "weight": 0.8 }
+  ]
+};
+
+const batch3 = {
+  "nodes": [
+    {
+      "id": "document:.agy/ultragoal/amharic-sentiment/brief.md",
+      "type": "document",
+      "name": "brief.md",
+      "filePath": ".agy/ultragoal/amharic-sentiment/brief.md",
+      "summary": "Execution brief specifying development objectives and verification criteria for the sentiment engine.",
+      "tags": ["documentation", "specification", "planning"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.agy/ultragoal/amharic-sentiment/handoff.json",
+      "type": "config",
+      "name": "handoff.json",
+      "filePath": ".agy/ultragoal/amharic-sentiment/handoff.json",
+      "summary": "Autonomous agent handoff state recording execution status, active goals, and output artifacts.",
+      "tags": ["configuration", "agent-state", "metadata"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agy/ultragoal/amharic-sentiment/progress.md",
+      "type": "document",
+      "name": "progress.md",
+      "filePath": ".agy/ultragoal/amharic-sentiment/progress.md",
+      "summary": "Progress tracking log detailing implementation steps completed during autonomous execution.",
+      "tags": ["documentation", "tracking", "log"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.agy/ultragoal/amharic-sentiment/status.json",
+      "type": "config",
+      "name": "status.json",
+      "filePath": ".agy/ultragoal/amharic-sentiment/status.json",
+      "summary": "Detailed execution ledger and status state tracking goal iterations and test results.",
+      "tags": ["configuration", "agent-state", "telemetry"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    { "source": "document:.agy/ultragoal/amharic-sentiment/brief.md", "target": "config:.agy/ultragoal/amharic-sentiment/status.json", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "document:.agy/ultragoal/amharic-sentiment/progress.md", "target": "config:.agy/ultragoal/amharic-sentiment/status.json", "type": "related", "direction": "forward", "weight": 0.5 },
+    { "source": "config:.agy/ultragoal/amharic-sentiment/handoff.json", "target": "config:.agy/ultragoal/amharic-sentiment/status.json", "type": "related", "direction": "forward", "weight": 0.5 }
+  ]
+};
+
+const batch4 = {
+  "nodes": [
+    {
+      "id": "document:AUTOPILOT_INSTRUCTIONS.md",
+      "type": "document",
+      "name": "AUTOPILOT_INSTRUCTIONS.md",
+      "filePath": "AUTOPILOT_INSTRUCTIONS.md",
+      "summary": "Comprehensive guidelines for autonomous delivery cycles and engineering governance.",
+      "tags": ["documentation", "workflow", "guidelines"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Primary project documentation covering Afro-XLMR foundation, O(N) normalization, threshold mathematics, CLI usage, and benchmarks.",
+      "tags": ["documentation", "entry-point", "overview"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:requirements.txt",
+      "type": "document",
+      "name": "requirements.txt",
+      "filePath": "requirements.txt",
+      "summary": "Project dependencies specification listing PyTorch, Transformers, Typer, Rich, and Pytest.",
+      "tags": ["configuration", "dependencies", "build-system"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "document:README.md", "target": "file:cli.py", "type": "documents", "direction": "forward", "weight": 0.5 },
+    { "source": "document:README.md", "target": "file:src/engine.py", "type": "documents", "direction": "forward", "weight": 0.5 },
+    { "source": "document:requirements.txt", "target": "file:src/engine.py", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "document:requirements.txt", "target": "file:cli.py", "type": "configures", "direction": "forward", "weight": 0.6 }
+  ]
+};
+
+const batch5 = {
+  "nodes": [
+    {
+      "id": "config:.agy/autopilot/state.json",
+      "type": "config",
+      "name": "state.json",
+      "filePath": ".agy/autopilot/state.json",
+      "summary": "Autopilot orchestration state tracking phase cycles, goals, and handoffs.",
+      "tags": ["configuration", "agent-state", "workflow"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+      "type": "document",
+      "name": "ralplan-amharic-sentiment-20260829T023900Z.md",
+      "filePath": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+      "summary": "Structured architectural plan covering tasks, risks, mitigations, and critic feedback.",
+      "tags": ["documentation", "planning", "architecture"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.agy/plans/ralplan-amharic-sentiment-consensus.json",
+      "type": "config",
+      "name": "ralplan-amharic-sentiment-consensus.json",
+      "filePath": ".agy/plans/ralplan-amharic-sentiment-consensus.json",
+      "summary": "Planning consensus verdict capturing architect and critic approval notes.",
+      "tags": ["configuration", "consensus", "metadata"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "type": "document",
+      "name": "ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "filePath": ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "summary": "Adversarial QA report verifying accuracy, latency, and edge case resilience.",
+      "tags": ["documentation", "qa", "verification"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.agy/qa/ultraqa-amharic-sentiment-verdict.json",
+      "type": "config",
+      "name": "ultraqa-amharic-sentiment-verdict.json",
+      "filePath": ".agy/qa/ultraqa-amharic-sentiment-verdict.json",
+      "summary": "UltraQA verdict metadata indicating clean test status.",
+      "tags": ["configuration", "qa", "metadata"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md",
+      "type": "document",
+      "name": "code-review-amharic-sentiment-20260829T024700Z.md",
+      "filePath": ".agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md",
+      "summary": "Code review findings and security assessment for sentiment engine implementation.",
+      "tags": ["documentation", "code-review", "quality"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.agy/reviews/code-review-amharic-sentiment-verdict.json",
+      "type": "config",
+      "name": "code-review-amharic-sentiment-verdict.json",
+      "filePath": ".agy/reviews/code-review-amharic-sentiment-verdict.json",
+      "summary": "Code review verdict record confirming clean approval.",
+      "tags": ["configuration", "code-review", "metadata"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "type": "document",
+      "name": "deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "filePath": ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "summary": "Requirements specification document detailing goals, constraints, and acceptance criteria.",
+      "tags": ["documentation", "specification", "requirements"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:.agy/ultragoal/amharic-sentiment/ledger.jsonl",
+      "type": "file",
+      "name": "ledger.jsonl",
+      "filePath": ".agy/ultragoal/amharic-sentiment/ledger.jsonl",
+      "summary": "JSON Lines ledger recording execution events, goal completions, and verification evidence.",
+      "tags": ["telemetry", "ledger", "log"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/preprocessor.py",
+      "type": "file",
+      "name": "preprocessor.py",
+      "filePath": "src/preprocessor.py",
+      "summary": "High-speed O(N) Ge'ez normalizer handling character unifications, labiovelars, punctuation, and elongation.",
+      "tags": ["nlp", "normalization", "amharic", "preprocessor"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:src/preprocessor.py:AmharicPreprocessor",
+      "type": "class",
+      "name": "AmharicPreprocessor",
+      "filePath": "src/preprocessor.py",
+      "lineRange": [13, 86],
+      "summary": "Normalizer class providing C-level string translation tables and regex cleaning for Amharic text.",
+      "tags": ["preprocessor", "normalization", "nlp"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/preprocessor.py:normalize",
+      "type": "function",
+      "name": "normalize",
+      "filePath": "src/preprocessor.py",
+      "lineRange": [45, 86],
+      "summary": "Normalizes Ge'ez orthography, maps homophones, reduces punctuation, and strips excessive elongation.",
+      "tags": ["normalization", "utility", "string-processing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tests/__init__.py",
+      "summary": "Test package initialization marker.",
+      "tags": ["test", "package-root"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:tests/benchmark_cases.json",
+      "type": "config",
+      "name": "benchmark_cases.json",
+      "filePath": "tests/benchmark_cases.json",
+      "summary": "Golden benchmark dataset containing 10 curated Amharic sentiment test cases across positive, negative, neutral, and mixed categories.",
+      "tags": ["dataset", "benchmark", "test-data"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:tests/test_preprocessor.py",
+      "type": "file",
+      "name": "test_preprocessor.py",
+      "filePath": "tests/test_preprocessor.py",
+      "summary": "Unit test suite verifying Ge'ez homophone unification, labiovelar reduction, punctuation normalization, and elongation hygiene.",
+      "tags": ["test", "unit-test", "preprocessor-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_empty_and_none",
+      "type": "function",
+      "name": "test_empty_and_none",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [7, 9],
+      "summary": "Tests empty and None inputs handling in preprocessor.",
+      "tags": ["test", "edge-case"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_ha_series_unification",
+      "type": "function",
+      "name": "test_ha_series_unification",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [12, 21],
+      "summary": "Validates Ha-family character canonicalization.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_sa_series_unification",
+      "type": "function",
+      "name": "test_sa_series_unification",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [24, 28],
+      "summary": "Validates Sa-family character canonicalization.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_glottal_series_unification",
+      "type": "function",
+      "name": "test_glottal_series_unification",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [31, 35],
+      "summary": "Validates Glottal stop character canonicalization.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_tsa_series_unification",
+      "type": "function",
+      "name": "test_tsa_series_unification",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [38, 42],
+      "summary": "Validates Tsa-family character canonicalization.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_labiovelar_reduction",
+      "type": "function",
+      "name": "test_labiovelar_reduction",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [45, 53],
+      "summary": "Validates reduction of complex labiovelars.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_punctuation_normalization",
+      "type": "function",
+      "name": "test_punctuation_normalization",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [56, 62],
+      "summary": "Validates Ge'ez and Latin punctuation normalization.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_preprocessor.py:test_elongation_and_hygiene",
+      "type": "function",
+      "name": "test_elongation_and_hygiene",
+      "filePath": "tests/test_preprocessor.py",
+      "lineRange": [65, 71],
+      "summary": "Validates multi-character elongation reduction.",
+      "tags": ["test", "normalization"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:src/preprocessor.py", "target": "class:src/preprocessor.py:AmharicPreprocessor", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:src/preprocessor.py", "target": "class:src/preprocessor.py:AmharicPreprocessor", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:src/preprocessor.py", "target": "function:src/preprocessor.py:normalize", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_empty_and_none", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_ha_series_unification", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_sa_series_unification", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_glottal_series_unification", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_tsa_series_unification", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_labiovelar_reduction", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_punctuation_normalization", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "function:tests/test_preprocessor.py:test_elongation_and_hygiene", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:tests/test_preprocessor.py", "target": "file:src/preprocessor.py", "type": "imports", "direction": "forward", "weight": 0.7 },
+    { "source": "file:src/preprocessor.py", "target": "file:tests/test_preprocessor.py", "type": "tested_by", "direction": "forward", "weight": 0.5 },
+    { "source": "function:tests/test_preprocessor.py:test_empty_and_none", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_ha_series_unification", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_sa_series_unification", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_glottal_series_unification", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_tsa_series_unification", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_labiovelar_reduction", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_punctuation_normalization", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "function:tests/test_preprocessor.py:test_elongation_and_hygiene", "target": "function:src/preprocessor.py:normalize", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "config:tests/benchmark_cases.json", "target": "file:cli.py", "type": "configures", "direction": "forward", "weight": 0.6 },
+    { "source": "config:tests/benchmark_cases.json", "target": "file:tests/test_engine.py", "type": "depends_on", "direction": "forward", "weight": 0.6 }
+  ]
+};
+
+fs.writeFileSync("/home/igi/Desktop/ab-d/dev/amh-synth/.ua/intermediate/batch-1.json", JSON.stringify(batch1, null, 2));
+fs.writeFileSync("/home/igi/Desktop/ab-d/dev/amh-synth/.ua/intermediate/batch-2.json", JSON.stringify(batch2, null, 2));
+fs.writeFileSync("/home/igi/Desktop/ab-d/dev/amh-synth/.ua/intermediate/batch-3.json", JSON.stringify(batch3, null, 2));
+fs.writeFileSync("/home/igi/Desktop/ab-d/dev/amh-synth/.ua/intermediate/batch-4.json", JSON.stringify(batch4, null, 2));
+fs.writeFileSync("/home/igi/Desktop/ab-d/dev/amh-synth/.ua/intermediate/batch-5.json", JSON.stringify(batch5, null, 2));
+console.log("Wrote all 5 batch files successfully.");

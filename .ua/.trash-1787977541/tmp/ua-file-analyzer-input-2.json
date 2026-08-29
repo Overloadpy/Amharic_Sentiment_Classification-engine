@@ -1,0 +1,34 @@
+{
+  "projectRoot": "/home/igi/Desktop/ab-d/dev/amh-synth",
+  "batchFiles": [
+    {
+      "path": "src/__init__.py",
+      "language": "python",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/threshold.py",
+      "language": "python",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_threshold.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/__init__.py": [
+      "src/engine.py",
+      "src/preprocessor.py",
+      "src/threshold.py"
+    ],
+    "src/threshold.py": [],
+    "tests/test_threshold.py": [
+      "src/threshold.py"
+    ]
+  }
+}

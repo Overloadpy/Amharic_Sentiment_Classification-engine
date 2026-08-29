@@ -1,0 +1,929 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "cli.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 210,
+      "nonEmptyLines": 168,
+      "functions": [
+        {
+          "name": "get_engine",
+          "startLine": 31,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "get_class_color",
+          "startLine": 40,
+          "endLine": 48,
+          "params": [
+            "sentiment_class"
+          ]
+        },
+        {
+          "name": "analyze",
+          "startLine": 52,
+          "endLine": 77,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "repl",
+          "startLine": 81,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "benchmark",
+          "startLine": 121,
+          "endLine": 206,
+          "params": [
+            "cases_path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "get_engine",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "get_class_color",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "analyze",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "repl",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "benchmark",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_engine",
+          "callee": "SentimentInferenceEngine",
+          "lineNumber": 35
+        },
+        {
+          "caller": "get_engine",
+          "callee": "_ENGINE.load",
+          "lineNumber": 36
+        },
+        {
+          "caller": "get_class_color",
+          "callee": "mapping.get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "analyze",
+          "callee": "typer.Argument",
+          "lineNumber": 53
+        },
+        {
+          "caller": "analyze",
+          "callee": "text.strip",
+          "lineNumber": 56
+        },
+        {
+          "caller": "analyze",
+          "callee": "console.print",
+          "lineNumber": 57
+        },
+        {
+          "caller": "analyze",
+          "callee": "typer.Exit",
+          "lineNumber": 58
+        },
+        {
+          "caller": "analyze",
+          "callee": "get_engine",
+          "lineNumber": 60
+        },
+        {
+          "caller": "analyze",
+          "callee": "engine.predict",
+          "lineNumber": 61
+        },
+        {
+          "caller": "analyze",
+          "callee": "get_class_color",
+          "lineNumber": 63
+        },
+        {
+          "caller": "analyze",
+          "callee": "Table",
+          "lineNumber": 65
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_column",
+          "lineNumber": 66
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_column",
+          "lineNumber": 67
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 69
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 70
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 71
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 72
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 73
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 74
+        },
+        {
+          "caller": "analyze",
+          "callee": "table.add_row",
+          "lineNumber": 75
+        },
+        {
+          "caller": "analyze",
+          "callee": "console.print",
+          "lineNumber": 77
+        },
+        {
+          "caller": "repl",
+          "callee": "console.print",
+          "lineNumber": 83
+        },
+        {
+          "caller": "repl",
+          "callee": "Panel.fit",
+          "lineNumber": 84
+        },
+        {
+          "caller": "repl",
+          "callee": "get_engine",
+          "lineNumber": 92
+        },
+        {
+          "caller": "repl",
+          "callee": "console.input(\"[bold blue]amharic-nlp > [/bold blue]\").strip",
+          "lineNumber": 96
+        },
+        {
+          "caller": "repl",
+          "callee": "console.input",
+          "lineNumber": 96
+        },
+        {
+          "caller": "repl",
+          "callee": "user_input.lower",
+          "lineNumber": 100
+        },
+        {
+          "caller": "repl",
+          "callee": "console.print",
+          "lineNumber": 101
+        },
+        {
+          "caller": "repl",
+          "callee": "engine.predict",
+          "lineNumber": 104
+        },
+        {
+          "caller": "repl",
+          "callee": "get_class_color",
+          "lineNumber": 105
+        },
+        {
+          "caller": "repl",
+          "callee": "console.print",
+          "lineNumber": 107
+        },
+        {
+          "caller": "repl",
+          "callee": "console.print",
+          "lineNumber": 116
+        },
+        {
+          "caller": "benchmark",
+          "callee": "typer.Option",
+          "lineNumber": 122
+        },
+        {
+          "caller": "benchmark",
+          "callee": "Path",
+          "lineNumber": 123
+        },
+        {
+          "caller": "benchmark",
+          "callee": "cases_path.exists",
+          "lineNumber": 130
+        },
+        {
+          "caller": "benchmark",
+          "callee": "console.print",
+          "lineNumber": 131
+        },
+        {
+          "caller": "benchmark",
+          "callee": "typer.Exit",
+          "lineNumber": 132
+        },
+        {
+          "caller": "benchmark",
+          "callee": "open",
+          "lineNumber": 134
+        },
+        {
+          "caller": "benchmark",
+          "callee": "json.load",
+          "lineNumber": 135
+        },
+        {
+          "caller": "benchmark",
+          "callee": "console.print",
+          "lineNumber": 137
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 137
+        },
+        {
+          "caller": "benchmark",
+          "callee": "get_engine",
+          "lineNumber": 139
+        },
+        {
+          "caller": "benchmark",
+          "callee": "Table",
+          "lineNumber": 141
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 142
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 143
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 144
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 145
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 146
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 147
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 148
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 149
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 150
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_column",
+          "lineNumber": 151
+        },
+        {
+          "caller": "benchmark",
+          "callee": "str",
+          "lineNumber": 157
+        },
+        {
+          "caller": "benchmark",
+          "callee": "item.get",
+          "lineNumber": 157
+        },
+        {
+          "caller": "benchmark",
+          "callee": "item.get",
+          "lineNumber": 158
+        },
+        {
+          "caller": "benchmark",
+          "callee": "item.get",
+          "lineNumber": 159
+        },
+        {
+          "caller": "benchmark",
+          "callee": "item.get",
+          "lineNumber": 160
+        },
+        {
+          "caller": "benchmark",
+          "callee": "engine.predict",
+          "lineNumber": 162
+        },
+        {
+          "caller": "benchmark",
+          "callee": "predicted.lower",
+          "lineNumber": 170
+        },
+        {
+          "caller": "benchmark",
+          "callee": "expected.lower",
+          "lineNumber": 170
+        },
+        {
+          "caller": "benchmark",
+          "callee": "get_class_color",
+          "lineNumber": 177
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 178
+        },
+        {
+          "caller": "benchmark",
+          "callee": "table.add_row",
+          "lineNumber": 180
+        },
+        {
+          "caller": "benchmark",
+          "callee": "console.print",
+          "lineNumber": 193
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 195
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 196
+        },
+        {
+          "caller": "benchmark",
+          "callee": "Panel.fit",
+          "lineNumber": 198
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 199
+        },
+        {
+          "caller": "benchmark",
+          "callee": "len",
+          "lineNumber": 200
+        },
+        {
+          "caller": "benchmark",
+          "callee": "console.print",
+          "lineNumber": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 198,
+      "nonEmptyLines": 162,
+      "classes": [
+        {
+          "name": "SentimentInferenceEngine",
+          "startLine": 20,
+          "endLine": 198,
+          "methods": [
+            "__init__",
+            "load",
+            "_extract_clauses",
+            "predict_probabilities",
+            "predict"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SentimentInferenceEngine",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "ThresholdConfig",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.device",
+          "lineNumber": 36
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.cuda.is_available",
+          "lineNumber": 37
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.device",
+          "lineNumber": 38
+        },
+        {
+          "caller": "__init__",
+          "callee": "hasattr",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.backends.mps.is_available",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.device",
+          "lineNumber": 40
+        },
+        {
+          "caller": "__init__",
+          "callee": "torch.device",
+          "lineNumber": 42
+        },
+        {
+          "caller": "load",
+          "callee": "AutoTokenizer.from_pretrained",
+          "lineNumber": 55
+        },
+        {
+          "caller": "load",
+          "callee": "AutoModelForSequenceClassification.from_pretrained",
+          "lineNumber": 56
+        },
+        {
+          "caller": "load",
+          "callee": "self.model.to",
+          "lineNumber": 57
+        },
+        {
+          "caller": "load",
+          "callee": "self.model.eval",
+          "lineNumber": 58
+        },
+        {
+          "caller": "load",
+          "callee": "v.lower",
+          "lineNumber": 61
+        },
+        {
+          "caller": "load",
+          "callee": "self._id2label.items",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "p.strip",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "c.split",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "p.strip",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "new_clauses.extend",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "new_clauses.append",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "len",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "c.split",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "c.strip",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_extract_clauses",
+          "callee": "unique_clauses.append",
+          "lineNumber": 86
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self.load",
+          "lineNumber": 99
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "raw_text.strip",
+          "lineNumber": 101
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self._extract_clauses",
+          "lineNumber": 105
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 106
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "c.strip",
+          "lineNumber": 106
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 108
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self.tokenizer(\n            cleaned_clauses,\n            padding=True,\n            truncation=True,\n            max_length=128,\n            return_tensors=\"pt\",\n        ).to",
+          "lineNumber": 111
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self.tokenizer",
+          "lineNumber": 111
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "torch.no_grad",
+          "lineNumber": 120
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self.model",
+          "lineNumber": 121
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "F.softmax",
+          "lineNumber": 123
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self._label2id.get",
+          "lineNumber": 125
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self._label2id.get",
+          "lineNumber": 126
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "self._label2id.get",
+          "lineNumber": 127
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[0, neg_idx].item",
+          "lineNumber": 130
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[0, neu_idx].item",
+          "lineNumber": 131
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[0, pos_idx].item",
+          "lineNumber": 132
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[:, neg_idx].max().item",
+          "lineNumber": 134
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[:, neg_idx].max",
+          "lineNumber": 134
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[:, pos_idx].max().item",
+          "lineNumber": 135
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "probs[:, pos_idx].max",
+          "lineNumber": 135
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "any",
+          "lineNumber": 138
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "float",
+          "lineNumber": 153
+        },
+        {
+          "caller": "predict_probabilities",
+          "callee": "float",
+          "lineNumber": 153
+        },
+        {
+          "caller": "predict",
+          "callee": "time.perf_counter",
+          "lineNumber": 168
+        },
+        {
+          "caller": "predict",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 170
+        },
+        {
+          "caller": "predict",
+          "callee": "time.perf_counter",
+          "lineNumber": 173
+        },
+        {
+          "caller": "predict",
+          "callee": "round",
+          "lineNumber": 180
+        },
+        {
+          "caller": "predict",
+          "callee": "self.predict_probabilities",
+          "lineNumber": 184
+        },
+        {
+          "caller": "predict",
+          "callee": "classify_sentiment",
+          "lineNumber": 187
+        },
+        {
+          "caller": "predict",
+          "callee": "time.perf_counter",
+          "lineNumber": 189
+        },
+        {
+          "caller": "predict",
+          "callee": "round",
+          "lineNumber": 193
+        },
+        {
+          "caller": "predict",
+          "callee": "round",
+          "lineNumber": 194
+        },
+        {
+          "caller": "predict",
+          "callee": "round",
+          "lineNumber": 195
+        },
+        {
+          "caller": "predict",
+          "callee": "round",
+          "lineNumber": 197
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 74,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "engine",
+          "startLine": 10,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "test_engine_output_format",
+          "startLine": 16,
+          "endLine": 32,
+          "params": [
+            "engine"
+          ]
+        },
+        {
+          "name": "test_empty_input",
+          "startLine": 35,
+          "endLine": 40,
+          "params": [
+            "engine"
+          ]
+        },
+        {
+          "name": "test_all_10_golden_benchmark_cases",
+          "startLine": 43,
+          "endLine": 74,
+          "params": [
+            "engine"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "engine",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "test_engine_output_format",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "test_empty_input",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "test_all_10_golden_benchmark_cases",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "engine",
+          "callee": "SentimentInferenceEngine",
+          "lineNumber": 11
+        },
+        {
+          "caller": "engine",
+          "callee": "eng.load",
+          "lineNumber": 12
+        },
+        {
+          "caller": "test_engine_output_format",
+          "callee": "engine.predict",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_engine_output_format",
+          "callee": "isinstance",
+          "lineNumber": 20
+        },
+        {
+          "caller": "test_empty_input",
+          "callee": "engine.predict",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "Path",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "bench_path.exists",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "open",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "json.load",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "len",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "engine.predict",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "actual.lower",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "expected.lower",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "mismatches.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "len",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_all_10_golden_benchmark_cases",
+          "callee": "json.dumps",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

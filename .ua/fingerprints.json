@@ -1,0 +1,717 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "5f94cd7fb50708504dbf33648234dd0267762c98",
+  "generatedAt": "2026-08-29T04:25:39.085Z",
+  "files": {
+    ".agy/autopilot/state.json": {
+      "filePath": ".agy/autopilot/state.json",
+      "contentHash": "756b2f0ae16b0afb1fe2a7a6106bde844a157ff54944dd2314ed27e78f875590",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md": {
+      "filePath": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+      "contentHash": "768d14db2b1464c951166fd0c470eddebc087470d6fbab8d91d140bf7e855ed3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/plans/ralplan-amharic-sentiment-consensus.json": {
+      "filePath": ".agy/plans/ralplan-amharic-sentiment-consensus.json",
+      "contentHash": "61b3e65dccf7e7988c5c75703952ba1f6b5ca9c92087bcda9ef4da0814093f51",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md": {
+      "filePath": ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "contentHash": "9e077f55972a0bd508b6f07057459d5919acadb7c2b8922e3a62015084e0d3dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/qa/ultraqa-amharic-sentiment-verdict.json": {
+      "filePath": ".agy/qa/ultraqa-amharic-sentiment-verdict.json",
+      "contentHash": "256fe195d28fcea8784ff085d059283bfe329a8832ec2ef97b72bef686df2900",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md": {
+      "filePath": ".agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md",
+      "contentHash": "5100a7ef2e28fc0571b30316bcbaf5baee7dc9ab03669e4a10256d4126786c19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/reviews/code-review-amharic-sentiment-verdict.json": {
+      "filePath": ".agy/reviews/code-review-amharic-sentiment-verdict.json",
+      "contentHash": "577620056ce04e188abda8c565b2c5ce16ee019a2300668ccb524b5396110c58",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md": {
+      "filePath": ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "contentHash": "bfd83c599e019914e8f285c1e7e6d800ca76064b598e859fc349ac3cb982693a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/ultragoal/amharic-sentiment/brief.md": {
+      "filePath": ".agy/ultragoal/amharic-sentiment/brief.md",
+      "contentHash": "4e620836de4f6ed4eaaa0789dbae0c81a6f131eb0f19da5d08b429e371889530",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/ultragoal/amharic-sentiment/handoff.json": {
+      "filePath": ".agy/ultragoal/amharic-sentiment/handoff.json",
+      "contentHash": "3d033b3472800d00dd1c92f8ff04b6ebf3a4a1b81988ca6082ea23abe61c3f23",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/ultragoal/amharic-sentiment/ledger.jsonl": {
+      "filePath": ".agy/ultragoal/amharic-sentiment/ledger.jsonl",
+      "contentHash": "6552f413c8ffcf2a592b2f8a90fd74bcdcaebe7224ede93842d75360bce5bdb4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": false
+    },
+    ".agy/ultragoal/amharic-sentiment/progress.md": {
+      "filePath": ".agy/ultragoal/amharic-sentiment/progress.md",
+      "contentHash": "a500b69e017ee05fa3d6e509a6d860448390539f8ff26f1f44be3c5de3dd5cd9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    ".agy/ultragoal/amharic-sentiment/status.json": {
+      "filePath": ".agy/ultragoal/amharic-sentiment/status.json",
+      "contentHash": "fb6325f253c873ae5760750948c7425f3a317f4bfc704e663074b5e264ee84e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "AUTOPILOT_INSTRUCTIONS.md": {
+      "filePath": "AUTOPILOT_INSTRUCTIONS.md",
+      "contentHash": "0d358bd2abfabfc7a09a33abb11966aad43748c783f812ec4ce8ea7054aa8029",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 155,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "50778ce3caa76376b4728374dd8d2fae79e406481cb46f0fee0011e2027032b7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "cli.py": {
+      "filePath": "cli.py",
+      "contentHash": "e12920dcd1aeb3bd1bdbd11615bffe9a18e14dd739e72b8228d10dc9ce96b09c",
+      "functions": [
+        {
+          "name": "get_engine",
+          "params": [],
+          "returnType": "SentimentInferenceEngine",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "get_class_color",
+          "params": [
+            "sentiment_class"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "analyze",
+          "params": [
+            "text"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "repl",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 37
+        },
+        {
+          "name": "benchmark",
+          "params": [
+            "cases_path"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 86
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typer",
+          "specifiers": [
+            "typer"
+          ]
+        },
+        {
+          "source": "rich",
+          "specifiers": [
+            "rprint"
+          ]
+        },
+        {
+          "source": "rich.console",
+          "specifiers": [
+            "Console"
+          ]
+        },
+        {
+          "source": "rich.panel",
+          "specifiers": [
+            "Panel"
+          ]
+        },
+        {
+          "source": "rich.table",
+          "specifiers": [
+            "Table"
+          ]
+        },
+        {
+          "source": "src.engine",
+          "specifiers": [
+            "SentimentInferenceEngine"
+          ]
+        }
+      ],
+      "exports": [
+        "get_engine",
+        "get_class_color",
+        "analyze",
+        "repl",
+        "benchmark"
+      ],
+      "totalLines": 211,
+      "hasStructuralAnalysis": true
+    },
+    "requirements.txt": {
+      "filePath": "requirements.txt",
+      "contentHash": "a7a78a3891e35ef63dee103fae7bd1159f6a23b0371705007c70b415262e3902",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "src/__init__.py": {
+      "filePath": "src/__init__.py",
+      "contentHash": "a676394a6f79c44752e7d43994ec56712d35188709a15cf2e01d1725a01150ef",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".preprocessor",
+          "specifiers": [
+            "AmharicPreprocessor"
+          ]
+        },
+        {
+          "source": ".threshold",
+          "specifiers": [
+            "classify_sentiment",
+            "ThresholdConfig",
+            "SentimentResult"
+          ]
+        },
+        {
+          "source": ".engine",
+          "specifiers": [
+            "SentimentInferenceEngine"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "src/engine.py": {
+      "filePath": "src/engine.py",
+      "contentHash": "455a741a6f6307eb419934cdb4fed8b3ab984ba575cfa09124bec080e868593b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SentimentInferenceEngine",
+          "methods": [
+            "__init__",
+            "load",
+            "_extract_clauses",
+            "predict_probabilities",
+            "predict"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 179
+        }
+      ],
+      "imports": [
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "torch",
+          "specifiers": [
+            "torch"
+          ]
+        },
+        {
+          "source": "torch.nn.functional",
+          "specifiers": [
+            "F"
+          ]
+        },
+        {
+          "source": "transformers",
+          "specifiers": [
+            "AutoModelForSequenceClassification",
+            "AutoTokenizer"
+          ]
+        },
+        {
+          "source": ".preprocessor",
+          "specifiers": [
+            "AmharicPreprocessor"
+          ]
+        },
+        {
+          "source": ".threshold",
+          "specifiers": [
+            "ThresholdConfig",
+            "classify_sentiment"
+          ]
+        }
+      ],
+      "exports": [
+        "SentimentInferenceEngine"
+      ],
+      "totalLines": 199,
+      "hasStructuralAnalysis": true
+    },
+    "src/preprocessor.py": {
+      "filePath": "src/preprocessor.py",
+      "contentHash": "e8e47e98d9354be4b9d1971f797dd915e386397ea88893db7c44bbbb4505c3b4",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AmharicPreprocessor",
+          "methods": [
+            "normalize"
+          ],
+          "properties": [
+            "_MAPPING"
+          ],
+          "exported": true,
+          "lineCount": 74
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "unicodedata",
+          "specifiers": [
+            "unicodedata"
+          ]
+        }
+      ],
+      "exports": [
+        "AmharicPreprocessor"
+      ],
+      "totalLines": 87,
+      "hasStructuralAnalysis": true
+    },
+    "src/threshold.py": {
+      "filePath": "src/threshold.py",
+      "contentHash": "5e3afc4c894b447d10209edc3ea0729088c649ecaa554008450bf6e4340b224d",
+      "functions": [
+        {
+          "name": "classify_sentiment",
+          "params": [
+            "p_pos",
+            "p_neg",
+            "config"
+          ],
+          "returnType": "SentimentResult",
+          "exported": true,
+          "lineCount": 77
+        }
+      ],
+      "classes": [
+        {
+          "name": "ThresholdConfig",
+          "methods": [],
+          "properties": [
+            "tau_act",
+            "delta_mix",
+            "delta_dom"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "SentimentResult",
+          "methods": [
+            "to_dict"
+          ],
+          "properties": [
+            "sentiment_class",
+            "confidence",
+            "p_pos",
+            "p_neg"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Literal"
+          ]
+        }
+      ],
+      "exports": [
+        "ThresholdConfig",
+        "SentimentResult",
+        "classify_sentiment"
+      ],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "tests/__init__.py": {
+      "filePath": "tests/__init__.py",
+      "contentHash": "1a3de7f4799144c0c62686edeba5e1fab1ae8f7d753c22dd65df487c52a335a8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "tests/benchmark_cases.json": {
+      "filePath": "tests/benchmark_cases.json",
+      "contentHash": "338aadee016ef28af6f26cc9402c319e2b42fe9a0b5e3c8d9c93aaff7eaca616",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_engine.py": {
+      "filePath": "tests/test_engine.py",
+      "contentHash": "a8e2f18190651c27e40ddfac18d2373abf401a3d39d1ef18588f7423d5a6802c",
+      "functions": [
+        {
+          "name": "engine",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_engine_output_format",
+          "params": [
+            "engine"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "test_empty_input",
+          "params": [
+            "engine"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_all_10_golden_benchmark_cases",
+          "params": [
+            "engine"
+          ],
+          "exported": true,
+          "lineCount": 32
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "src.engine",
+          "specifiers": [
+            "SentimentInferenceEngine"
+          ]
+        }
+      ],
+      "exports": [
+        "engine",
+        "test_engine_output_format",
+        "test_empty_input",
+        "test_all_10_golden_benchmark_cases"
+      ],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_preprocessor.py": {
+      "filePath": "tests/test_preprocessor.py",
+      "contentHash": "154a7b2b23808168166ceb4df6fdbf67bd617d1f9d4b32d5aebabb178ac08614",
+      "functions": [
+        {
+          "name": "test_empty_and_none",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_ha_series_unification",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_sa_series_unification",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_glottal_series_unification",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_tsa_series_unification",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_labiovelar_reduction",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_punctuation_normalization",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_elongation_and_hygiene",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "src.preprocessor",
+          "specifiers": [
+            "AmharicPreprocessor"
+          ]
+        }
+      ],
+      "exports": [
+        "test_empty_and_none",
+        "test_ha_series_unification",
+        "test_sa_series_unification",
+        "test_glottal_series_unification",
+        "test_tsa_series_unification",
+        "test_labiovelar_reduction",
+        "test_punctuation_normalization",
+        "test_elongation_and_hygiene"
+      ],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_threshold.py": {
+      "filePath": "tests/test_threshold.py",
+      "contentHash": "572e4ae7858cb14418beebb51ea6c1abfb4a47e9371c9f7e0366842bb91f4342",
+      "functions": [
+        {
+          "name": "test_positive_dominance",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_negative_dominance",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_neutral_condition",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_mixed_condition",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_custom_config",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "src.threshold",
+          "specifiers": [
+            "classify_sentiment",
+            "ThresholdConfig"
+          ]
+        }
+      ],
+      "exports": [
+        "test_positive_dominance",
+        "test_negative_dominance",
+        "test_neutral_condition",
+        "test_mixed_condition",
+        "test_custom_config"
+      ],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

@@ -1,0 +1,702 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [
+    ".agy/ultragoal/amharic-sentiment/ledger.jsonl"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 12,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 9
+    }
+  },
+  "results": [
+    {
+      "path": ".agy/autopilot/state.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 22,
+      "nonEmptyLines": 22,
+      "sections": [
+        {
+          "heading": "mode",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "active",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "current_phase",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "phase_cycle",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "iteration",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "goal",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "handoffs",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "return_to_ralplan_reason",
+          "level": 1,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 70,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "Ralplan: Amharic Sentiment Classification Engine & CLI Test Harness",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Summary",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "2. Ordered Tasks & Dependencies",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "3. Risks & Mitigations",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "4. Steelman Alternative",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "5. Critic Pass",
+          "level": 2,
+          "line": 66
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": ".agy/plans/ralplan-amharic-sentiment-consensus.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "verdict",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "planPath",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "architectNotes",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "criticNotes",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "blockedReason",
+          "level": 1,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 52,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "UltraQA Report: Amharic Sentiment Classification Engine & CLI Harness",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Scope Under Test",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "2. Threat & Break Hypotheses",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "3. Scenarios Executed & Results",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "4. Defects Found",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "5. Residual Risks",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "6. Verdict",
+          "level": 2,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": ".agy/qa/ultraqa-amharic-sentiment-verdict.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "verdict",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "clean",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "skipped",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "reason",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "qaPath",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "defects",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "returnToRalplanReason",
+          "level": 1,
+          "line": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 44,
+      "nonEmptyLines": 33,
+      "sections": [
+        {
+          "heading": "Code Review: Amharic Sentiment Classification & CLI Harness",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Scope of Review",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "2. Evidence Reviewed",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "3. Findings",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "4. Security & Safety Notes",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "5. Verdict",
+          "level": 2,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": ".agy/reviews/code-review-amharic-sentiment-verdict.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "verdict",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "clean",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "recommendation",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "reviewPath",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "blockers",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "ultragoalHandoff",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "returnToRalplanReason",
+          "level": 1,
+          "line": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 40,
+      "nonEmptyLines": 29,
+      "sections": [
+        {
+          "heading": "Specification: Amharic Sentiment Classification Engine & CLI Test Harness",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Goal & Non-Goals",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Goal:",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "Non-Goals:",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "2. Constraints",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "3. Acceptance Criteria",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "4. Open Questions Remaining",
+          "level": 2,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "src/preprocessor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 86,
+      "nonEmptyLines": 64,
+      "classes": [
+        {
+          "name": "AmharicPreprocessor",
+          "startLine": 13,
+          "endLine": 86,
+          "methods": [
+            "normalize"
+          ],
+          "properties": [
+            "_MAPPING"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AmharicPreprocessor",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalize",
+          "callee": "unicodedata.normalize",
+          "lineNumber": 72
+        },
+        {
+          "caller": "normalize",
+          "callee": "text.translate",
+          "lineNumber": 75
+        },
+        {
+          "caller": "normalize",
+          "callee": "cls._ELONGATION_PATTERN.sub",
+          "lineNumber": 78
+        },
+        {
+          "caller": "normalize",
+          "callee": "cls._PUNCTUATION_REPEAT_PATTERN.sub",
+          "lineNumber": 81
+        },
+        {
+          "caller": "normalize",
+          "callee": "cls._WHITESPACE_PATTERN.sub(\" \", text).strip",
+          "lineNumber": 84
+        },
+        {
+          "caller": "normalize",
+          "callee": "cls._WHITESPACE_PATTERN.sub",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/benchmark_cases.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 62,
+      "nonEmptyLines": 62,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "tests/test_preprocessor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 51,
+      "functions": [
+        {
+          "name": "test_empty_and_none",
+          "startLine": 7,
+          "endLine": 9,
+          "params": []
+        },
+        {
+          "name": "test_ha_series_unification",
+          "startLine": 12,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "test_sa_series_unification",
+          "startLine": 24,
+          "endLine": 28,
+          "params": []
+        },
+        {
+          "name": "test_glottal_series_unification",
+          "startLine": 31,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "test_tsa_series_unification",
+          "startLine": 38,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "test_labiovelar_reduction",
+          "startLine": 45,
+          "endLine": 53,
+          "params": []
+        },
+        {
+          "name": "test_punctuation_normalization",
+          "startLine": 56,
+          "endLine": 62,
+          "params": []
+        },
+        {
+          "name": "test_elongation_and_hygiene",
+          "startLine": 65,
+          "endLine": 71,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_empty_and_none",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "test_ha_series_unification",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "test_sa_series_unification",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "test_glottal_series_unification",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "test_tsa_series_unification",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "test_labiovelar_reduction",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "test_punctuation_normalization",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "test_elongation_and_hygiene",
+          "line": 65,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_empty_and_none",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 8
+        },
+        {
+          "caller": "test_empty_and_none",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 9
+        },
+        {
+          "caller": "test_ha_series_unification",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 17
+        },
+        {
+          "caller": "test_ha_series_unification",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 21
+        },
+        {
+          "caller": "test_sa_series_unification",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_glottal_series_unification",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_tsa_series_unification",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_labiovelar_reduction",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_labiovelar_reduction",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_labiovelar_reduction",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_labiovelar_reduction",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 53
+        },
+        {
+          "caller": "test_punctuation_normalization",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_punctuation_normalization",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_elongation_and_hygiene",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_elongation_and_hygiene",
+          "callee": "AmharicPreprocessor.normalize",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    }
+  ]
+}

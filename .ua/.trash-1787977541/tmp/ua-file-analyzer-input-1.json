@@ -1,0 +1,35 @@
+{
+  "projectRoot": "/home/igi/Desktop/ab-d/dev/amh-synth",
+  "batchFiles": [
+    {
+      "path": "cli.py",
+      "language": "python",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/engine.py",
+      "language": "python",
+      "sizeLines": 198,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_engine.py",
+      "language": "python",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "cli.py": [
+      "src/engine.py"
+    ],
+    "src/engine.py": [
+      "src/preprocessor.py",
+      "src/threshold.py"
+    ],
+    "tests/test_engine.py": [
+      "src/engine.py"
+    ]
+  }
+}

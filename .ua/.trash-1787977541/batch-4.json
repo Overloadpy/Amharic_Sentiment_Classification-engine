@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "document:AUTOPILOT_INSTRUCTIONS.md",
+      "type": "document",
+      "name": "AUTOPILOT_INSTRUCTIONS.md",
+      "filePath": "AUTOPILOT_INSTRUCTIONS.md",
+      "summary": "Comprehensive guidelines for autonomous delivery cycles and engineering governance.",
+      "tags": [
+        "documentation",
+        "workflow",
+        "guidelines"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Primary project documentation covering Afro-XLMR foundation, O(N) normalization, threshold mathematics, CLI usage, and benchmarks.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:requirements.txt",
+      "type": "document",
+      "name": "requirements.txt",
+      "filePath": "requirements.txt",
+      "summary": "Project dependencies specification listing PyTorch, Transformers, Typer, Rich, and Pytest.",
+      "tags": [
+        "configuration",
+        "dependencies",
+        "build-system"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:cli.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/engine.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:requirements.txt",
+      "target": "file:src/engine.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:requirements.txt",
+      "target": "file:cli.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}
