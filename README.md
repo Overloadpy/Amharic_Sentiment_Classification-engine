@@ -12,7 +12,7 @@
 [![Neural Purity](https://img.shields.io/badge/Purity-100%25%20Neural%20(Zero%20Mocks)-brightgreen.svg)]()
 [![Inference Latency](https://img.shields.io/badge/Latency-35--52ms%20(CPU)-success.svg)]()
 [![Benchmark Accuracy](https://img.shields.io/badge/Golden%20Benchmark-100%25%20Accuracy-gold.svg)]()
-[![License MIT](https://img.shields.io/badge/License-MIT-purple.svg)]()
+[![License MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 ---
 
@@ -75,8 +75,9 @@
 ### 3.1 Clone and Install Dependencies
 
 ```bash
-# 1. Clone or navigate to the repository
-cd /home/igi/Desktop/ab-d/dev/amh-synth
+# 1. Clone the repository
+git clone https://github.com/Overloadpy/Amharic_Sentiment_Classification-engine.git
+cd Amharic_Sentiment_Classification-engine
 
 # 2. Install required Python dependencies
 pip install torch transformers sentencepiece accelerate typer rich PySide6 pytest pandas scikit-learn matplotlib
@@ -219,7 +220,7 @@ amh-synth/
 | **Training Corpus** | AfriSenti-SemEval 2023 Task 12 (Amharic Twitter & Social Media Sentiment) |
 | **Vocabulary Size** | 70,000 subwords (SentencePiece Byte-Pair Encoding) |
 | **Parameter Count** | $111\text{ Million Parameters}$ ($502\text{ MB}$ FP32 Safetensors) |
-| **Primary Hub URL** | [`https://huggingface.co/Tirsit/amharic-sentiment-afriberta`](https://huggingface.co/Tirsit/amharic-sentiment-afriberta) |
+| **Primary Hub URL** | [https://huggingface.co/Tirsit/amharic-sentiment-afriberta](https://huggingface.co/Tirsit/amharic-sentiment-afriberta) |
 
 ---
 
@@ -229,12 +230,12 @@ Deep-dive documentation and reproducible research notebooks are available in the
 
 | Document / Notebook | File Path | Summary & Purpose |
 | :--- | :--- | :--- |
-| **Problem Definition** | [`docs/PROBLEM_DEFINITION.md`](file:///home/igi/Desktop/ab-d/dev/amh-synth/docs/PROBLEM_DEFINITION.md) | Formal engineering problem statement, Semitic linguistic bottlenecks, target stakeholders, and 3 core Research Questions (RQs). |
-| **Dataset Documentation** | [`docs/DATASET_DOCUMENTATION.md`](file:///home/igi/Desktop/ab-d/dev/amh-synth/docs/DATASET_DOCUMENTATION.md) | Comprehensive ML Data Card detailing corpus provenance, schema definitions, 4-class taxonomy, Ge'ez homophone tables, and bias audit. |
-| **Results & Empirical Analysis** | [`docs/RESULTS_AND_ANALYSIS.md`](file:///home/igi/Desktop/ab-d/dev/amh-synth/docs/RESULTS_AND_ANALYSIS.md) | Multi-model evaluation matrix, sub-category linguistic breakdowns (negation, slang, mixed clauses), hardware latency, and neural purity proofs. |
-| **Exploratory Data Analysis** | [`notebooks/01_amharic_sentiment_eda.ipynb`](file:///home/igi/Desktop/ab-d/dev/amh-synth/notebooks/01_amharic_sentiment_eda.ipynb) | Linguistic statistics, sequence length distributions, Ge'ez homophone frequencies, and 2D dual-axis probability scatter plots. |
-| **Preprocessing Pipeline** | [`notebooks/02_amharic_preprocessing_and_pipeline.ipynb`](file:///home/igi/Desktop/ab-d/dev/amh-synth/notebooks/02_amharic_preprocessing_and_pipeline.ipynb) | Step-by-step $O(N)$ text normalization, subword BPE tokenization efficiency, and token fragmentation reduction analysis. |
-| **Model Comparison Benchmark** | [`notebooks/03_amharic_model_comparison_and_benchmarks.ipynb`](file:///home/igi/Desktop/ab-d/dev/amh-synth/notebooks/03_amharic_model_comparison_and_benchmarks.ipynb) | Comparative benchmark of Classical TF-IDF baseline vs. Base MLM vs. Fine-tuned AfriBERTa with confusion matrices and latency-accuracy trade-offs. |
+| **Problem Definition** | [`docs/PROBLEM_DEFINITION.md`](docs/PROBLEM_DEFINITION.md) | Formal engineering problem statement, Semitic linguistic bottlenecks, target stakeholders, and 3 core Research Questions (RQs). |
+| **Dataset Documentation** | [`docs/DATASET_DOCUMENTATION.md`](docs/DATASET_DOCUMENTATION.md) | Comprehensive ML Data Card detailing corpus provenance, schema definitions, 4-class taxonomy, Ge'ez homophone tables, and bias audit. |
+| **Results & Empirical Analysis** | [`docs/RESULTS_AND_ANALYSIS.md`](docs/RESULTS_AND_ANALYSIS.md) | Multi-model evaluation matrix, sub-category linguistic breakdowns (negation, slang, mixed clauses), hardware latency, and neural purity proofs. |
+| **Exploratory Data Analysis** | [`notebooks/01_amharic_sentiment_eda.ipynb`](notebooks/01_amharic_sentiment_eda.ipynb) | Linguistic statistics, sequence length distributions, Ge'ez homophone frequencies, and 2D dual-axis probability scatter plots. |
+| **Preprocessing Pipeline** | [`notebooks/02_amharic_preprocessing_and_pipeline.ipynb`](notebooks/02_amharic_preprocessing_and_pipeline.ipynb) | Step-by-step $O(N)$ text normalization, subword BPE tokenization efficiency, and token fragmentation reduction analysis. |
+| **Model Comparison Benchmark** | [`notebooks/03_amharic_model_comparison_and_benchmarks.ipynb`](notebooks/03_amharic_model_comparison_and_benchmarks.ipynb) | Comparative benchmark of Classical TF-IDF baseline vs. Base MLM vs. Fine-tuned AfriBERTa with confusion matrices and latency-accuracy trade-offs. |
 
 ---
 
@@ -257,7 +258,7 @@ Deep-dive documentation and reproducible research notebooks are available in the
 
 - **Lead Engineer & Author:** **Yordanos Andargachew**
 - **Phone / Contact:** `+251 952 190 305` (`0952190305`)
-- **License:** Open Academic & Research License ([MIT License](file:///home/igi/Desktop/ab-d/dev/amh-synth/LICENSE))
+- **License:** Open Academic & Research License ([MIT License](LICENSE))
 
 ### Citation
 ```bibtex
