@@ -1,0 +1,82 @@
+[
+  {
+    "id": "layer:user-interface",
+    "name": "User Interface & CLI Layer",
+    "description": "Desktop PySide6 Studio GUI and Typer/Rich command-line interfaces for real-time Amharic analysis, REPL sessions, and golden benchmarks.",
+    "nodeIds": [
+      "file:gui.py",
+      "file:cli.py"
+    ]
+  },
+  {
+    "id": "layer:sentiment-engine",
+    "name": "Neural Sentiment Inference Engine",
+    "description": "Core neural sequence classification engine using fine-tuned AfriBERTa weights, syntactic clause splitting, and multi-thread CPU execution.",
+    "nodeIds": [
+      "file:src/engine.py",
+      "file:src/__init__.py"
+    ]
+  },
+  {
+    "id": "layer:nlp-preprocessing",
+    "name": "Amharic NLP Preprocessor",
+    "description": "Deterministic Ge'ez orthographic normalization, homophone unification, labiovelar reduction, and elongation hygiene.",
+    "nodeIds": [
+      "file:src/preprocessor.py"
+    ]
+  },
+  {
+    "id": "layer:calibration-thresholding",
+    "name": "Decoupled Calibration & Thresholding",
+    "description": "Mathematical continuous dual-axis calibration calculating confidence scores and resolving Positive, Negative, Neutral, and Mixed categories.",
+    "nodeIds": [
+      "file:src/threshold.py"
+    ]
+  },
+  {
+    "id": "layer:verification-benchmarks",
+    "name": "Verification & Benchmark Suite",
+    "description": "Pytest automated unit test suites and 10-case Amharic Golden Benchmark dataset.",
+    "nodeIds": [
+      "file:tests/test_engine.py",
+      "file:tests/test_preprocessor.py",
+      "file:tests/test_threshold.py",
+      "file:tests/__init__.py",
+      "config:tests/benchmark_cases.json"
+    ]
+  },
+  {
+    "id": "layer:project-documentation",
+    "name": "Project Documentation",
+    "description": "Comprehensive project documentation, architecture overviews, quickstart guides, and mission specifications.",
+    "nodeIds": [
+      "document:README.md",
+      "document:AUTOPILOT_INSTRUCTIONS.md"
+    ]
+  },
+  {
+    "id": "layer:configuration-orchestration",
+    "name": "Configuration & Metadata",
+    "description": "Python dependencies, ignore rules, AST fingerprints, knowledge graph data, and autonomous lifecycle artifacts.",
+    "nodeIds": [
+      "config:requirements.txt",
+      "config:.ua/.understandignore",
+      "config:.ua/fingerprints.json",
+      "config:.ua/knowledge-graph.json",
+      "config:.ua/meta.json",
+      "config:.agy/autopilot/state.json",
+      "document:.agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+      "config:.agy/plans/ralplan-amharic-sentiment-consensus.json",
+      "document:.agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+      "config:.agy/qa/ultraqa-amharic-sentiment-verdict.json",
+      "document:.agy/reviews/code-review-amharic-sentiment-20260829T024700Z.md",
+      "config:.agy/reviews/code-review-amharic-sentiment-verdict.json",
+      "document:.agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+      "document:.agy/ultragoal/amharic-sentiment/brief.md",
+      "config:.agy/ultragoal/amharic-sentiment/handoff.json",
+      "document:.agy/ultragoal/amharic-sentiment/progress.md",
+      "config:.agy/ultragoal/amharic-sentiment/status.json",
+      "config:.agy/ultragoal/amharic-sentiment/ledger.jsonl"
+    ]
+  }
+]

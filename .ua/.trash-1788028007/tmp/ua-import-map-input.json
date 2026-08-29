@@ -1,6 +1,5 @@
 {
-  "scriptCompleted": true,
-  "contentDigest": "5ddc7d5e02ad565650459eac7a4c32e6086fc0ea24f5552c64232f3968c27381",
+  "projectRoot": "/home/igi/Desktop/ab-d/dev/amh-synth",
   "files": [
     {
       "path": ".agy/autopilot/state.json",
@@ -81,6 +80,54 @@
       "fileCategory": "config"
     },
     {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/fingerprints.json",
+      "language": "json",
+      "sizeLines": 716,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batches.json",
+      "language": "json",
+      "sizeLines": 655,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 472,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 1556,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-input.json",
+      "language": "json",
+      "sizeLines": 358,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-output.json",
+      "language": "json",
+      "sizeLines": 86,
+      "fileCategory": "config"
+    },
+    {
       "path": "AUTOPILOT_INSTRUCTIONS.md",
       "language": "markdown",
       "sizeLines": 154,
@@ -95,7 +142,13 @@
     {
       "path": "cli.py",
       "language": "python",
-      "sizeLines": 210,
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gui.py",
+      "language": "python",
+      "sizeLines": 929,
       "fileCategory": "code"
     },
     {
@@ -113,7 +166,7 @@
     {
       "path": "src/engine.py",
       "language": "python",
-      "sizeLines": 198,
+      "sizeLines": 230,
       "fileCategory": "code"
     },
     {
@@ -158,23 +211,5 @@
       "sizeLines": 47,
       "fileCategory": "code"
     }
-  ],
-  "totalFiles": 26,
-  "filteredByIgnore": 0,
-  "estimatedComplexity": "small",
-  "stats": {
-    "filesScanned": 26,
-    "byCategory": {
-      "config": 7,
-      "docs": 9,
-      "code": 10
-    },
-    "byLanguage": {
-      "json": 7,
-      "markdown": 8,
-      "jsonl": 1,
-      "python": 9,
-      "txt": 1
-    }
-  }
+  ]
 }

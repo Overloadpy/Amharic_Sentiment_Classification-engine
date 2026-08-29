@@ -1,0 +1,81 @@
+{
+  "batchIndex": 5,
+  "batchFiles": [
+    {
+      "path": ".ua/fingerprints.json",
+      "language": "json",
+      "sizeLines": 716,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 1556,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "config:.ua/fingerprints.json",
+      "type": "config",
+      "name": "fingerprints.json",
+      "filePath": ".ua/fingerprints.json",
+      "summary": "Structural AST fingerprint baseline enabling incremental update detection across commits.",
+      "tags": [
+        "ast",
+        "fingerprint",
+        "incremental",
+        "metadata"
+      ],
+      "lineCount": 420
+    },
+    {
+      "id": "config:.ua/knowledge-graph.json",
+      "type": "config",
+      "name": "knowledge-graph.json",
+      "filePath": ".ua/knowledge-graph.json",
+      "summary": "Assembled architectural knowledge graph storing project nodes, dependency edges, layers, and guided tour steps.",
+      "tags": [
+        "knowledge-graph",
+        "architecture",
+        "graph-data"
+      ],
+      "lineCount": 1400
+    },
+    {
+      "id": "config:.ua/meta.json",
+      "type": "config",
+      "name": "meta.json",
+      "filePath": ".ua/meta.json",
+      "summary": "Metadata timestamp, commit hash, and analyzed file statistics for the project knowledge graph.",
+      "tags": [
+        "metadata",
+        "commit",
+        "timestamps"
+      ],
+      "lineCount": 6
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:.ua/meta.json",
+      "target": "config:.ua/knowledge-graph.json",
+      "type": "configures",
+      "weight": 0.6,
+      "description": "Provides version and commit metadata"
+    },
+    {
+      "source": "config:.ua/fingerprints.json",
+      "target": "config:.ua/knowledge-graph.json",
+      "type": "depends_on",
+      "weight": 0.6,
+      "description": "Provides AST baseline for graph updates"
+    }
+  ]
+}

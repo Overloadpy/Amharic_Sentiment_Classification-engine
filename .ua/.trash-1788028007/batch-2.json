@@ -1,0 +1,218 @@
+{
+  "batchIndex": 2,
+  "batchFiles": [
+    {
+      "path": "gui.py",
+      "language": "python",
+      "sizeLines": 929,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/preprocessor.py",
+      "language": "python",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_preprocessor.py",
+      "language": "python",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "file:gui.py",
+      "type": "file",
+      "name": "gui.py",
+      "filePath": "gui.py",
+      "summary": "Modern PySide6 (Qt6) desktop GUI studio featuring dark/light themes, live single-text inference, preset pills, progress gauges, and interactive golden benchmarks.",
+      "tags": [
+        "gui",
+        "pyside6",
+        "qt",
+        "desktop-app",
+        "ui",
+        "threading"
+      ],
+      "complexity": "complex",
+      "lineCount": 930
+    },
+    {
+      "id": "class:gui.py:InferenceWorker",
+      "type": "class",
+      "name": "InferenceWorker",
+      "filePath": "gui.py",
+      "summary": "Background QThread executing non-blocking neural predictions and emitting results via Qt signals.",
+      "tags": [
+        "qthread",
+        "async",
+        "worker",
+        "signals"
+      ],
+      "complexity": "simple",
+      "lineCount": 20
+    },
+    {
+      "id": "class:gui.py:BenchmarkWorker",
+      "type": "class",
+      "name": "BenchmarkWorker",
+      "filePath": "gui.py",
+      "summary": "Background QThread running sequential golden benchmark evaluations with per-case progress signals.",
+      "tags": [
+        "qthread",
+        "benchmark",
+        "async",
+        "worker"
+      ],
+      "complexity": "moderate",
+      "lineCount": 35
+    },
+    {
+      "id": "class:gui.py:SentimentStudioWindow",
+      "type": "class",
+      "name": "SentimentStudioWindow",
+      "filePath": "gui.py",
+      "summary": "Main studio window managing QSS themes, tabs, input text controls, hero cards, probability progress bars, and benchmark tables.",
+      "tags": [
+        "qmainwindow",
+        "studio",
+        "theme",
+        "dashboard"
+      ],
+      "complexity": "complex",
+      "lineCount": 420
+    },
+    {
+      "id": "function:gui.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "gui.py",
+      "summary": "Initializes QApplication and launches the SentimentStudioWindow.",
+      "tags": [
+        "entrypoint",
+        "gui"
+      ],
+      "complexity": "simple",
+      "lineCount": 10
+    },
+    {
+      "id": "file:src/preprocessor.py",
+      "type": "file",
+      "name": "preprocessor.py",
+      "filePath": "src/preprocessor.py",
+      "summary": "Deterministic O(N) Amharic text preprocessor implementing Unicode NFKC normalization, Ge'ez homophone unification, labiovelar reduction, and character elongation hygiene.",
+      "tags": [
+        "nlp",
+        "geez",
+        "amharic",
+        "normalization",
+        "preprocessing"
+      ],
+      "complexity": "moderate",
+      "lineCount": 87
+    },
+    {
+      "id": "class:src/preprocessor.py:AmharicPreprocessor",
+      "type": "class",
+      "name": "AmharicPreprocessor",
+      "filePath": "src/preprocessor.py",
+      "summary": "High-performance normalizer utilizing precomputed C-level maketrans translation tables and compiled regular expressions.",
+      "tags": [
+        "normalizer",
+        "homophones",
+        "regex",
+        "c-optimization"
+      ],
+      "complexity": "moderate",
+      "lineCount": 75
+    },
+    {
+      "id": "file:tests/test_preprocessor.py",
+      "type": "file",
+      "name": "test_preprocessor.py",
+      "filePath": "tests/test_preprocessor.py",
+      "summary": "Unit test suite testing Ge'ez Ha, Sa, Glottal, Tsa series unification, labiovelar reduction, punctuation normalization, and elongation hygiene.",
+      "tags": [
+        "unit-test",
+        "pytest",
+        "linguistics",
+        "normalization"
+      ],
+      "complexity": "moderate",
+      "lineCount": 75
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:gui.py",
+      "target": "class:gui.py:InferenceWorker",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines background inference worker"
+    },
+    {
+      "source": "file:gui.py",
+      "target": "class:gui.py:BenchmarkWorker",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines benchmark runner worker"
+    },
+    {
+      "source": "file:gui.py",
+      "target": "class:gui.py:SentimentStudioWindow",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines main window UI"
+    },
+    {
+      "source": "file:gui.py",
+      "target": "function:gui.py:main",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines main application entrypoint"
+    },
+    {
+      "source": "file:gui.py",
+      "target": "file:src/engine.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Imports SentimentInferenceEngine"
+    },
+    {
+      "source": "file:gui.py",
+      "target": "file:src/preprocessor.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Imports AmharicPreprocessor"
+    },
+    {
+      "source": "class:gui.py:InferenceWorker",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Invokes neural prediction on background thread"
+    },
+    {
+      "source": "file:src/preprocessor.py",
+      "target": "class:src/preprocessor.py:AmharicPreprocessor",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines AmharicPreprocessor class"
+    },
+    {
+      "source": "file:src/engine.py",
+      "target": "file:src/preprocessor.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Uses AmharicPreprocessor for text normalization"
+    },
+    {
+      "source": "file:src/preprocessor.py",
+      "target": "file:tests/test_preprocessor.py",
+      "type": "tested_by",
+      "weight": 0.5,
+      "description": "Tested by test_preprocessor suite"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "batchIndex": 4,
+  "batchFiles": [
+    {
+      "path": ".agy/ultragoal/amharic-sentiment/brief.md",
+      "language": "markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agy/ultragoal/amharic-sentiment/handoff.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".agy/ultragoal/amharic-sentiment/progress.md",
+      "language": "markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agy/ultragoal/amharic-sentiment/status.json",
+      "language": "json",
+      "sizeLines": 77,
+      "fileCategory": "config"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "document:.agy/ultragoal/amharic-sentiment/brief.md",
+      "type": "document",
+      "name": "brief.md",
+      "filePath": ".agy/ultragoal/amharic-sentiment/brief.md",
+      "summary": "Project goal brief specifying pure neural inference constraints, zero mocks, AfriSenti validation, and Rich CLI deliverables.",
+      "tags": [
+        "spec",
+        "brief",
+        "autopilot",
+        "requirements"
+      ],
+      "lineCount": 16
+    },
+    {
+      "id": "config:.agy/ultragoal/amharic-sentiment/handoff.json",
+      "type": "config",
+      "name": "handoff.json",
+      "filePath": ".agy/ultragoal/amharic-sentiment/handoff.json",
+      "summary": "Phase handoff artifact documenting completed deliverable files, test verdicts, and operational readiness.",
+      "tags": [
+        "handoff",
+        "artifacts",
+        "status"
+      ],
+      "lineCount": 20
+    },
+    {
+      "id": "document:.agy/ultragoal/amharic-sentiment/progress.md",
+      "type": "document",
+      "name": "progress.md",
+      "filePath": ".agy/ultragoal/amharic-sentiment/progress.md",
+      "summary": "Task checklist and progress tracker recording milestone completions across development phases.",
+      "tags": [
+        "progress",
+        "checklist",
+        "milestones"
+      ],
+      "lineCount": 15
+    },
+    {
+      "id": "config:.agy/ultragoal/amharic-sentiment/status.json",
+      "type": "config",
+      "name": "status.json",
+      "filePath": ".agy/ultragoal/amharic-sentiment/status.json",
+      "summary": "Structured run status record indicating current goal execution phase and completion.",
+      "tags": [
+        "status",
+        "lifecycle",
+        "config"
+      ],
+      "lineCount": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:.agy/ultragoal/amharic-sentiment/brief.md",
+      "target": "document:.agy/ultragoal/amharic-sentiment/progress.md",
+      "type": "documents",
+      "weight": 0.5,
+      "description": "Guides development progress"
+    },
+    {
+      "source": "config:.agy/ultragoal/amharic-sentiment/status.json",
+      "target": "config:.agy/ultragoal/amharic-sentiment/handoff.json",
+      "type": "configures",
+      "weight": 0.6,
+      "description": "Tracks phase state"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "batchIndex": 6,
+  "batchFiles": [
+    {
+      "path": "AUTOPILOT_INSTRUCTIONS.md",
+      "language": "markdown",
+      "sizeLines": 154,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 95,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "requirements.txt",
+      "language": "txt",
+      "sizeLines": 7,
+      "fileCategory": "docs"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "document:AUTOPILOT_INSTRUCTIONS.md",
+      "type": "document",
+      "name": "AUTOPILOT_INSTRUCTIONS.md",
+      "filePath": "AUTOPILOT_INSTRUCTIONS.md",
+      "summary": "Detailed mission specifications for autonomous delivery, architecture rules, testing criteria, and benchmark invariants.",
+      "tags": [
+        "instructions",
+        "specs",
+        "rules"
+      ],
+      "lineCount": 65
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project overview, quickstart documentation, architectural pipeline diagram, and CLI / GUI usage instructions.",
+      "tags": [
+        "documentation",
+        "readme",
+        "quickstart",
+        "architecture"
+      ],
+      "lineCount": 110
+    },
+    {
+      "id": "config:requirements.txt",
+      "type": "config",
+      "name": "requirements.txt",
+      "filePath": "requirements.txt",
+      "summary": "Python dependency definitions specifying PyTorch, Transformers, Accelerate, Typer, Rich, PySide6, and Pytest packages.",
+      "tags": [
+        "dependencies",
+        "pip",
+        "package-config"
+      ],
+      "lineCount": 15
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:cli.py",
+      "type": "documents",
+      "weight": 0.5,
+      "description": "Documents CLI usage"
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:gui.py",
+      "type": "documents",
+      "weight": 0.5,
+      "description": "Documents Desktop Studio GUI"
+    },
+    {
+      "source": "config:requirements.txt",
+      "target": "file:src/engine.py",
+      "type": "configures",
+      "weight": 0.6,
+      "description": "Supplies PyTorch and Transformers runtime"
+    }
+  ]
+}

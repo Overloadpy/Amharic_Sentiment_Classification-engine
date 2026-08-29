@@ -1,9 +1,9 @@
 {
   "scriptCompleted": true,
   "stats": {
-    "filesScanned": 26,
-    "filesWithImports": 6,
-    "totalEdges": 9
+    "filesScanned": 35,
+    "filesWithImports": 7,
+    "totalEdges": 11
   },
   "importMap": {
     ".agy/autopilot/state.json": [],
@@ -19,10 +19,22 @@
     ".agy/ultragoal/amharic-sentiment/ledger.jsonl": [],
     ".agy/ultragoal/amharic-sentiment/progress.md": [],
     ".agy/ultragoal/amharic-sentiment/status.json": [],
+    ".ua/.understandignore": [],
+    ".ua/fingerprints.json": [],
+    ".ua/intermediate/batches.json": [],
+    ".ua/intermediate/scan-result.json": [],
+    ".ua/knowledge-graph.json": [],
+    ".ua/meta.json": [],
+    ".ua/tmp/ua-import-map-input.json": [],
+    ".ua/tmp/ua-import-map-output.json": [],
     "AUTOPILOT_INSTRUCTIONS.md": [],
     "README.md": [],
     "cli.py": [
       "src/engine.py"
+    ],
+    "gui.py": [
+      "src/engine.py",
+      "src/preprocessor.py"
     ],
     "requirements.txt": [],
     "src/__init__.py": [

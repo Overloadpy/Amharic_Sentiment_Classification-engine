@@ -1,0 +1,176 @@
+{
+  "batchIndex": 3,
+  "batchFiles": [
+    {
+      "path": "src/__init__.py",
+      "language": "python",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/threshold.py",
+      "language": "python",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_threshold.py",
+      "language": "python",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "file:src/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/__init__.py",
+      "summary": "Package entrypoint exporting SentimentInferenceEngine, AmharicPreprocessor, ThresholdConfig, and classify_sentiment.",
+      "tags": [
+        "package",
+        "exports",
+        "init"
+      ],
+      "complexity": "simple",
+      "lineCount": 16
+    },
+    {
+      "id": "file:src/threshold.py",
+      "type": "file",
+      "name": "threshold.py",
+      "filePath": "src/threshold.py",
+      "summary": "Continuous decoupled dual-axis thresholding and calibration logic converting polar probabilities to Positive, Negative, Neutral, or Mixed with confidence percentages.",
+      "tags": [
+        "calibration",
+        "thresholding",
+        "confidence",
+        "dual-axis"
+      ],
+      "complexity": "moderate",
+      "lineCount": 117
+    },
+    {
+      "id": "class:src/threshold.py:ThresholdConfig",
+      "type": "class",
+      "name": "ThresholdConfig",
+      "filePath": "src/threshold.py",
+      "summary": "Frozen dataclass specifying activation floor tau_act, mixed margin delta_mix, and dominance margin delta_dom.",
+      "tags": [
+        "dataclass",
+        "hyperparameters",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "lineCount": 8
+    },
+    {
+      "id": "class:src/threshold.py:SentimentResult",
+      "type": "class",
+      "name": "SentimentResult",
+      "filePath": "src/threshold.py",
+      "summary": "Data model representing classified sentiment category, confidence score, and positive/negative polar activations.",
+      "tags": [
+        "dataclass",
+        "result-model",
+        "sentiment"
+      ],
+      "complexity": "simple",
+      "lineCount": 15
+    },
+    {
+      "id": "function:src/threshold.py:classify_sentiment",
+      "type": "function",
+      "name": "classify_sentiment",
+      "filePath": "src/threshold.py",
+      "summary": "Applies dual-axis mathematical conditions to classify sentiment and compute calibrated percentage confidence.",
+      "tags": [
+        "algorithm",
+        "classification",
+        "calibration"
+      ],
+      "complexity": "moderate",
+      "lineCount": 65
+    },
+    {
+      "id": "file:tests/test_threshold.py",
+      "type": "file",
+      "name": "test_threshold.py",
+      "filePath": "tests/test_threshold.py",
+      "summary": "Unit tests verifying positive dominance, negative dominance, neutral boundary, mixed condition, and custom config calibration.",
+      "tags": [
+        "unit-test",
+        "pytest",
+        "calibration",
+        "threshold"
+      ],
+      "complexity": "simple",
+      "lineCount": 48
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/__init__.py",
+      "target": "file:src/engine.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Exports SentimentInferenceEngine"
+    },
+    {
+      "source": "file:src/__init__.py",
+      "target": "file:src/preprocessor.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Exports AmharicPreprocessor"
+    },
+    {
+      "source": "file:src/__init__.py",
+      "target": "file:src/threshold.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Exports ThresholdConfig and classify_sentiment"
+    },
+    {
+      "source": "file:src/threshold.py",
+      "target": "class:src/threshold.py:ThresholdConfig",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines ThresholdConfig dataclass"
+    },
+    {
+      "source": "file:src/threshold.py",
+      "target": "class:src/threshold.py:SentimentResult",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines SentimentResult dataclass"
+    },
+    {
+      "source": "file:src/threshold.py",
+      "target": "function:src/threshold.py:classify_sentiment",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines classify_sentiment function"
+    },
+    {
+      "source": "file:src/engine.py",
+      "target": "file:src/threshold.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Imports ThresholdConfig and classify_sentiment"
+    },
+    {
+      "source": "class:src/engine.py:SentimentInferenceEngine",
+      "target": "function:src/threshold.py:classify_sentiment",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Classifies polar probabilities with dual-axis calibration"
+    },
+    {
+      "source": "file:src/threshold.py",
+      "target": "file:tests/test_threshold.py",
+      "type": "tested_by",
+      "weight": 0.5,
+      "description": "Tested by test_threshold suite"
+    }
+  ]
+}

@@ -1,19 +1,28 @@
 {
   "schemaVersion": 1,
   "algorithm": "louvain",
-  "totalFiles": 26,
-  "totalBatches": 5,
+  "totalFiles": 35,
+  "totalBatches": 7,
   "exportsByPath": {
     ".agy/ultragoal/amharic-sentiment/ledger.jsonl": [],
+    ".ua/.understandignore": [],
     "cli.py": [
       "get_engine",
       "get_class_color",
       "analyze",
       "repl",
-      "benchmark"
+      "benchmark",
+      "gui"
+    ],
+    "gui.py": [
+      "InferenceWorker",
+      "BenchmarkWorker",
+      "SentimentStudioWindow",
+      "main"
     ],
     "src/__init__.py": [],
     "src/engine.py": [
+      "_resolve_default_model",
       "SentimentInferenceEngine"
     ],
     "src/preprocessor.py": [
@@ -56,13 +65,13 @@
         {
           "path": "cli.py",
           "language": "python",
-          "sizeLines": 210,
+          "sizeLines": 222,
           "fileCategory": "code"
         },
         {
           "path": "src/engine.py",
           "language": "python",
-          "sizeLines": 198,
+          "sizeLines": 230,
           "fileCategory": "code"
         },
         {
@@ -88,14 +97,14 @@
         "src/engine.py": [
           {
             "path": "src/preprocessor.py",
-            "batchIndex": 5,
+            "batchIndex": 2,
             "symbols": [
               "AmharicPreprocessor"
             ]
           },
           {
             "path": "src/threshold.py",
-            "batchIndex": 2,
+            "batchIndex": 3,
             "symbols": [
               "ThresholdConfig",
               "SentimentResult",
@@ -103,8 +112,18 @@
             ]
           },
           {
-            "path": "src/__init__.py",
+            "path": "gui.py",
             "batchIndex": 2,
+            "symbols": [
+              "InferenceWorker",
+              "BenchmarkWorker",
+              "SentimentStudioWindow",
+              "main"
+            ]
+          },
+          {
+            "path": "src/__init__.py",
+            "batchIndex": 3,
             "symbols": []
           }
         ]
@@ -112,6 +131,66 @@
     },
     {
       "batchIndex": 2,
+      "files": [
+        {
+          "path": "gui.py",
+          "language": "python",
+          "sizeLines": 929,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/preprocessor.py",
+          "language": "python",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_preprocessor.py",
+          "language": "python",
+          "sizeLines": 71,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "gui.py": [
+          "src/engine.py",
+          "src/preprocessor.py"
+        ],
+        "src/preprocessor.py": [],
+        "tests/test_preprocessor.py": [
+          "src/preprocessor.py"
+        ]
+      },
+      "neighborMap": {
+        "gui.py": [
+          {
+            "path": "src/engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "_resolve_default_model",
+              "SentimentInferenceEngine"
+            ]
+          }
+        ],
+        "src/preprocessor.py": [
+          {
+            "path": "src/__init__.py",
+            "batchIndex": 3,
+            "symbols": []
+          },
+          {
+            "path": "src/engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "_resolve_default_model",
+              "SentimentInferenceEngine"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
       "files": [
         {
           "path": "src/__init__.py",
@@ -149,12 +228,13 @@
             "path": "src/engine.py",
             "batchIndex": 1,
             "symbols": [
+              "_resolve_default_model",
               "SentimentInferenceEngine"
             ]
           },
           {
             "path": "src/preprocessor.py",
-            "batchIndex": 5,
+            "batchIndex": 2,
             "symbols": [
               "AmharicPreprocessor"
             ]
@@ -165,6 +245,7 @@
             "path": "src/engine.py",
             "batchIndex": 1,
             "symbols": [
+              "_resolve_default_model",
               "SentimentInferenceEngine"
             ]
           }
@@ -172,7 +253,7 @@
       }
     },
     {
-      "batchIndex": 3,
+      "batchIndex": 4,
       "files": [
         {
           "path": ".agy/ultragoal/amharic-sentiment/brief.md",
@@ -208,7 +289,36 @@
       "neighborMap": {}
     },
     {
-      "batchIndex": 4,
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": ".ua/fingerprints.json",
+          "language": "json",
+          "sizeLines": 716,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/knowledge-graph.json",
+          "language": "json",
+          "sizeLines": 1556,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/meta.json",
+          "language": "json",
+          "sizeLines": 5,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".ua/fingerprints.json": [],
+        ".ua/knowledge-graph.json": [],
+        ".ua/meta.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
       "files": [
         {
           "path": "AUTOPILOT_INSTRUCTIONS.md",
@@ -237,7 +347,7 @@
       "neighborMap": {}
     },
     {
-      "batchIndex": 5,
+      "batchIndex": 7,
       "files": [
         {
           "path": ".agy/autopilot/state.json",
@@ -294,10 +404,34 @@
           "fileCategory": "code"
         },
         {
-          "path": "src/preprocessor.py",
-          "language": "python",
-          "sizeLines": 86,
+          "path": ".ua/.understandignore",
+          "language": "unknown",
+          "sizeLines": 69,
           "fileCategory": "code"
+        },
+        {
+          "path": ".ua/intermediate/batches.json",
+          "language": "json",
+          "sizeLines": 655,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/intermediate/scan-result.json",
+          "language": "json",
+          "sizeLines": 472,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/tmp/ua-import-map-input.json",
+          "language": "json",
+          "sizeLines": 358,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/tmp/ua-import-map-output.json",
+          "language": "json",
+          "sizeLines": 86,
+          "fileCategory": "config"
         },
         {
           "path": "tests/__init__.py",
@@ -310,12 +444,6 @@
           "language": "json",
           "sizeLines": 62,
           "fileCategory": "config"
-        },
-        {
-          "path": "tests/test_preprocessor.py",
-          "language": "python",
-          "sizeLines": 71,
-          "fileCategory": "code"
         }
       ],
       "batchImportData": {
@@ -328,29 +456,15 @@
         ".agy/reviews/code-review-amharic-sentiment-verdict.json": [],
         ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md": [],
         ".agy/ultragoal/amharic-sentiment/ledger.jsonl": [],
-        "src/preprocessor.py": [],
+        ".ua/.understandignore": [],
+        ".ua/intermediate/batches.json": [],
+        ".ua/intermediate/scan-result.json": [],
+        ".ua/tmp/ua-import-map-input.json": [],
+        ".ua/tmp/ua-import-map-output.json": [],
         "tests/__init__.py": [],
-        "tests/benchmark_cases.json": [],
-        "tests/test_preprocessor.py": [
-          "src/preprocessor.py"
-        ]
+        "tests/benchmark_cases.json": []
       },
-      "neighborMap": {
-        "src/preprocessor.py": [
-          {
-            "path": "src/__init__.py",
-            "batchIndex": 2,
-            "symbols": []
-          },
-          {
-            "path": "src/engine.py",
-            "batchIndex": 1,
-            "symbols": [
-              "SentimentInferenceEngine"
-            ]
-          }
-        ]
-      }
+      "neighborMap": {}
     }
   ]
 }

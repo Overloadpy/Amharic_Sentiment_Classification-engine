@@ -1,9 +1,0 @@
-{
-  "fixedSectionOk": true,
-  "nodesRecovered": 0,
-  "edgesRestored": 0,
-  "crossBatchEdgesAdded": 0,
-  "typesRemapped": 0,
-  "complexityRemapped": 0,
-  "notes": ["Assembled graph is clean with 53 nodes and 75 edges. All imports, tested_by, and structural edges fully resolved with no dangling references."]
-}

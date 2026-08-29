@@ -1,0 +1,52 @@
+[
+  {
+    "order": 1,
+    "title": "Project Architecture & Quickstart",
+    "description": "Start here to understand the Amharic sentiment pipeline architecture, transformer fine-tuning background, and available CLI/GUI entrypoints.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Ge'ez Orthographic Normalization",
+    "description": "Examine how Amharic spelling variations, homophones (ሐ/ኀ/ሀ, ሠ/ሰ, ዐ/አ, ፀ/ጸ), labiovelar reductions, and character elongations are cleaned in O(N) time.",
+    "nodeIds": [
+      "file:src/preprocessor.py"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Neural Sequence Classification Engine",
+    "description": "Explore the SentimentInferenceEngine loading fine-tuned AfriBERTa weights, executing pure PyTorch tensor forward passes, and handling multi-clause discourse boundaries.",
+    "nodeIds": [
+      "file:src/engine.py"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Decoupled Dual-Axis Calibration Logic",
+    "description": "Inspect the mathematical calibration mapping positive and negative polar probabilities into calibrated confidence percentages and resolving Positive, Negative, Neutral, and Mixed categories.",
+    "nodeIds": [
+      "file:src/threshold.py"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "Desktop Studio GUI & Terminal CLI",
+    "description": "See how PySide6 (Qt6) and Typer/Rich harness the engine for interactive REPL queries, live visual sentiment gauges, theme switching, and batch execution.",
+    "nodeIds": [
+      "file:gui.py",
+      "file:cli.py"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Golden Benchmark & Automated Verification",
+    "description": "Review the 10-case Golden Benchmark dataset and comprehensive Pytest test suites guaranteeing 100% accuracy and strict regression safety.",
+    "nodeIds": [
+      "file:tests/test_engine.py",
+      "config:tests/benchmark_cases.json"
+    ]
+  }
+]

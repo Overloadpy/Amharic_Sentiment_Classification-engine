@@ -1,20 +1,6 @@
 {
-  "name": "Amharic_Sentiment_Classification-engine",
-  "description": "A high-performance, deterministic Amharic Sentiment Classification Engine leveraging Afro-centric transformer representations, O(N) orthographic normalization, and continuous decoupled dual-axis thresholding.",
-  "languages": [
-    "json",
-    "jsonl",
-    "markdown",
-    "python",
-    "txt"
-  ],
-  "frameworks": [
-    "PyTorch",
-    "Transformers",
-    "Typer",
-    "Rich",
-    "Pytest"
-  ],
+  "scriptCompleted": true,
+  "contentDigest": "93fa164e35d0b61b145468a0980ef7a3fa43fbb0004b99d89e8351038cfbb36a",
   "files": [
     {
       "path": ".agy/autopilot/state.json",
@@ -95,6 +81,54 @@
       "fileCategory": "config"
     },
     {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/fingerprints.json",
+      "language": "json",
+      "sizeLines": 716,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/batches.json",
+      "language": "json",
+      "sizeLines": 655,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 472,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 1556,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-input.json",
+      "language": "json",
+      "sizeLines": 358,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-output.json",
+      "language": "json",
+      "sizeLines": 86,
+      "fileCategory": "config"
+    },
+    {
       "path": "AUTOPILOT_INSTRUCTIONS.md",
       "language": "markdown",
       "sizeLines": 154,
@@ -109,7 +143,13 @@
     {
       "path": "cli.py",
       "language": "python",
-      "sizeLines": 210,
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gui.py",
+      "language": "python",
+      "sizeLines": 929,
       "fileCategory": "code"
     },
     {
@@ -127,7 +167,7 @@
     {
       "path": "src/engine.py",
       "language": "python",
-      "sizeLines": 198,
+      "sizeLines": 230,
       "fileCategory": "code"
     },
     {
@@ -173,9 +213,25 @@
       "fileCategory": "code"
     }
   ],
-  "totalFiles": 26,
+  "totalFiles": 35,
   "filteredByIgnore": 0,
-  "estimatedComplexity": "small",
+  "estimatedComplexity": "moderate",
+  "stats": {
+    "filesScanned": 35,
+    "byCategory": {
+      "config": 14,
+      "docs": 9,
+      "code": 12
+    },
+    "byLanguage": {
+      "json": 14,
+      "markdown": 8,
+      "jsonl": 1,
+      "unknown": 1,
+      "python": 10,
+      "txt": 1
+    }
+  },
   "importMap": {
     ".agy/autopilot/state.json": [],
     ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md": [],
@@ -190,10 +246,22 @@
     ".agy/ultragoal/amharic-sentiment/ledger.jsonl": [],
     ".agy/ultragoal/amharic-sentiment/progress.md": [],
     ".agy/ultragoal/amharic-sentiment/status.json": [],
+    ".ua/.understandignore": [],
+    ".ua/fingerprints.json": [],
+    ".ua/intermediate/batches.json": [],
+    ".ua/intermediate/scan-result.json": [],
+    ".ua/knowledge-graph.json": [],
+    ".ua/meta.json": [],
+    ".ua/tmp/ua-import-map-input.json": [],
+    ".ua/tmp/ua-import-map-output.json": [],
     "AUTOPILOT_INSTRUCTIONS.md": [],
     "README.md": [],
     "cli.py": [
       "src/engine.py"
+    ],
+    "gui.py": [
+      "src/engine.py",
+      "src/preprocessor.py"
     ],
     "requirements.txt": [],
     "src/__init__.py": [
@@ -218,5 +286,19 @@
     "tests/test_threshold.py": [
       "src/threshold.py"
     ]
-  }
+  },
+  "projectName": "amh-synth",
+  "projectDescription": "Amharic Neural Sentiment Classification Engine and Studio",
+  "languages": [
+    "python",
+    "json",
+    "markdown"
+  ],
+  "frameworks": [
+    "PySide6",
+    "PyTorch",
+    "HuggingFace Transformers",
+    "Typer",
+    "Rich"
+  ]
 }

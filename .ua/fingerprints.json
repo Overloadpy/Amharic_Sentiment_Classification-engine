@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "5f94cd7fb50708504dbf33648234dd0267762c98",
-  "generatedAt": "2026-08-29T04:25:39.085Z",
+  "gitCommitHash": "a558f562858416c880f634acd073c3555c444f69",
+  "generatedAt": "2026-08-29T18:26:47.232Z",
   "files": {
     ".agy/autopilot/state.json": {
       "filePath": ".agy/autopilot/state.json",
@@ -133,6 +133,86 @@
       "totalLines": 78,
       "hasStructuralAnalysis": true
     },
+    ".ua/.understandignore": {
+      "filePath": ".ua/.understandignore",
+      "contentHash": "08f852cdb6316eb5348256994859cd13deb5d7b999d102d03583427d44dffa6e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/fingerprints.json": {
+      "filePath": ".ua/fingerprints.json",
+      "contentHash": "4d730f5baf1e36ad2ce06ae124d280a6776c1cfaae524dbc0ccf3589322e650d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 717,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/batches.json": {
+      "filePath": ".ua/intermediate/batches.json",
+      "contentHash": "a20bcd564646e554feb85dde6974332e84f6c823916b0d752382d3608c9b6eaa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 470,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/intermediate/scan-result.json": {
+      "filePath": ".ua/intermediate/scan-result.json",
+      "contentHash": "46e85ca332b392163e4b9ee9316d15ba2bf3d9c24751c206640eb7ef2eb369c3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 304,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/knowledge-graph.json": {
+      "filePath": ".ua/knowledge-graph.json",
+      "contentHash": "cdcfc831601223c12a9af574afed64b49abe1925f9393b12623a9aae81b1ddee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1344,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/meta.json": {
+      "filePath": ".ua/meta.json",
+      "contentHash": "36261684b66c8625259b3f150262a22e5e7da4bdc01b13ff7073e7f234e9c085",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/ua-import-map-input.json": {
+      "filePath": ".ua/tmp/ua-import-map-input.json",
+      "contentHash": "d89f17482895a8d21006ab8598b0950e42c301472128db799e017ffad7b65be7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    ".ua/tmp/ua-import-map-output.json": {
+      "filePath": ".ua/tmp/ua-import-map-output.json",
+      "contentHash": "c459765bc23a3732bc9b65a178f21774c99af9617465d86a5ca246f1f68532cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
     "AUTOPILOT_INSTRUCTIONS.md": {
       "filePath": "AUTOPILOT_INSTRUCTIONS.md",
       "contentHash": "0d358bd2abfabfc7a09a33abb11966aad43748c783f812ec4ce8ea7054aa8029",
@@ -155,7 +235,7 @@
     },
     "cli.py": {
       "filePath": "cli.py",
-      "contentHash": "e12920dcd1aeb3bd1bdbd11615bffe9a18e14dd739e72b8228d10dc9ce96b09c",
+      "contentHash": "99e8d8817d0b3ba42960cb253bce7c1b86d232f14efbb03f0d3d9948d7890ae0",
       "functions": [
         {
           "name": "get_engine",
@@ -197,6 +277,13 @@
           "returnType": "None",
           "exported": true,
           "lineCount": 86
+        },
+        {
+          "name": "gui",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
         }
       ],
       "classes": [],
@@ -261,9 +348,176 @@
         "get_class_color",
         "analyze",
         "repl",
-        "benchmark"
+        "benchmark",
+        "gui"
       ],
-      "totalLines": 211,
+      "totalLines": 223,
+      "hasStructuralAnalysis": true
+    },
+    "gui.py": {
+      "filePath": "gui.py",
+      "contentHash": "3dc3db8ed252958be5296f1e5547742c97ce21e4fccd50db0e9a4a88bee10647",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "InferenceWorker",
+          "methods": [
+            "__init__",
+            "run"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "BenchmarkWorker",
+          "methods": [
+            "__init__",
+            "run"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 37
+        },
+        {
+          "name": "SentimentStudioWindow",
+          "methods": [
+            "__init__",
+            "_async_load_weights",
+            "_init_ui",
+            "_setup_single_analysis_tab",
+            "_on_input_text_changed",
+            "set_input_text",
+            "run_single_inference",
+            "_on_inference_finished",
+            "_on_inference_error",
+            "_setup_benchmark_tab",
+            "run_benchmark",
+            "_on_bench_case_finished",
+            "_on_bench_all_finished",
+            "toggle_theme",
+            "apply_theme"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 455
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "PySide6.QtCore",
+          "specifiers": [
+            "QObject",
+            "QRunnable",
+            "QSize",
+            "Qt",
+            "QThread",
+            "QThreadPool",
+            "Signal",
+            "Slot"
+          ]
+        },
+        {
+          "source": "PySide6.QtGui",
+          "specifiers": [
+            "QColor",
+            "QFont",
+            "QIcon",
+            "QKeySequence",
+            "QPainter",
+            "QPalette",
+            "QShortcut",
+            "QTextCursor"
+          ]
+        },
+        {
+          "source": "PySide6.QtWidgets",
+          "specifiers": [
+            "QApplication",
+            "QButtonGroup",
+            "QFrame",
+            "QGraphicsDropShadowEffect",
+            "QGridLayout",
+            "QGroupBox",
+            "QHBoxLayout",
+            "QHeaderView",
+            "QLabel",
+            "QLineEdit",
+            "QMainWindow",
+            "QProgressBar",
+            "QPushButton",
+            "QRadioButton",
+            "QScrollArea",
+            "QSizePolicy",
+            "QSpacerItem",
+            "QSplitter",
+            "QStyle",
+            "QTabWidget",
+            "QTableWidget",
+            "QTableWidgetItem",
+            "QTextEdit",
+            "QVBoxLayout",
+            "QWidget"
+          ]
+        },
+        {
+          "source": "src.engine",
+          "specifiers": [
+            "SentimentInferenceEngine"
+          ]
+        },
+        {
+          "source": "src.preprocessor",
+          "specifiers": [
+            "AmharicPreprocessor"
+          ]
+        }
+      ],
+      "exports": [
+        "InferenceWorker",
+        "BenchmarkWorker",
+        "SentimentStudioWindow",
+        "main"
+      ],
+      "totalLines": 930,
       "hasStructuralAnalysis": true
     },
     "requirements.txt": {
@@ -309,8 +563,16 @@
     },
     "src/engine.py": {
       "filePath": "src/engine.py",
-      "contentHash": "455a741a6f6307eb419934cdb4fed8b3ab984ba575cfa09124bec080e868593b",
-      "functions": [],
+      "contentHash": "31f0b91ee680ea605a97d79f24122f6529145b1dba5897aa03c1394d7841934f",
+      "functions": [
+        {
+          "name": "_resolve_default_model",
+          "params": [],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
       "classes": [
         {
           "name": "SentimentInferenceEngine",
@@ -323,10 +585,22 @@
           ],
           "properties": [],
           "exported": true,
-          "lineCount": 179
+          "lineCount": 196
         }
       ],
       "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
         {
           "source": "time",
           "specifiers": [
@@ -373,9 +647,10 @@
         }
       ],
       "exports": [
+        "_resolve_default_model",
         "SentimentInferenceEngine"
       ],
-      "totalLines": 199,
+      "totalLines": 231,
       "hasStructuralAnalysis": true
     },
     "src/preprocessor.py": {

@@ -1,0 +1,354 @@
+{
+  "batchIndex": 1,
+  "batchFiles": [
+    {
+      "path": "cli.py",
+      "language": "python",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/engine.py",
+      "language": "python",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_engine.py",
+      "language": "python",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "file:cli.py",
+      "type": "file",
+      "name": "cli.py",
+      "filePath": "cli.py",
+      "summary": "Command-line interface and test harness for single-shot analysis, interactive REPL, golden benchmarks, and GUI launching using Typer and Rich.",
+      "tags": [
+        "cli",
+        "typer",
+        "rich",
+        "interface",
+        "harness"
+      ],
+      "complexity": "moderate",
+      "lineCount": 222
+    },
+    {
+      "id": "function:cli.py:get_engine",
+      "type": "function",
+      "name": "get_engine",
+      "filePath": "cli.py",
+      "summary": "Retrieves or lazy-initializes the singleton SentimentInferenceEngine instance.",
+      "tags": [
+        "singleton",
+        "initialization",
+        "engine"
+      ],
+      "complexity": "simple",
+      "lineCount": 8
+    },
+    {
+      "id": "function:cli.py:get_class_color",
+      "type": "function",
+      "name": "get_class_color",
+      "filePath": "cli.py",
+      "summary": "Maps sentiment class names (Positive, Negative, Neutral, Mixed) to terminal color styles.",
+      "tags": [
+        "formatting",
+        "color",
+        "rich"
+      ],
+      "complexity": "simple",
+      "lineCount": 10
+    },
+    {
+      "id": "function:cli.py:analyze",
+      "type": "function",
+      "name": "analyze",
+      "filePath": "cli.py",
+      "summary": "Typer CLI command that analyzes an Amharic input string and renders a formatted Rich table.",
+      "tags": [
+        "cli-command",
+        "inference",
+        "analysis"
+      ],
+      "complexity": "simple",
+      "lineCount": 25
+    },
+    {
+      "id": "function:cli.py:repl",
+      "type": "function",
+      "name": "repl",
+      "filePath": "cli.py",
+      "summary": "Typer CLI command providing an interactive read-eval-print loop for live Amharic sentiment queries.",
+      "tags": [
+        "cli-command",
+        "repl",
+        "interactive"
+      ],
+      "complexity": "moderate",
+      "lineCount": 38
+    },
+    {
+      "id": "function:cli.py:benchmark",
+      "type": "function",
+      "name": "benchmark",
+      "filePath": "cli.py",
+      "summary": "Typer CLI command that executes the 10-case Golden Benchmark suite and displays a summary table.",
+      "tags": [
+        "cli-command",
+        "benchmark",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "lineCount": 85
+    },
+    {
+      "id": "function:cli.py:gui",
+      "type": "function",
+      "name": "gui",
+      "filePath": "cli.py",
+      "summary": "Typer CLI command that launches the desktop PySide6 Sentiment Studio GUI application.",
+      "tags": [
+        "cli-command",
+        "gui",
+        "launcher"
+      ],
+      "complexity": "simple",
+      "lineCount": 12
+    },
+    {
+      "id": "file:src/engine.py",
+      "type": "file",
+      "name": "engine.py",
+      "filePath": "src/engine.py",
+      "summary": "Core neural sentiment inference engine leveraging fine-tuned AfriBERTa sequence classification with decoupled dual-axis calibration and CPU thread limiting.",
+      "tags": [
+        "core",
+        "neural",
+        "afriberta",
+        "inference",
+        "transformers",
+        "pytorch"
+      ],
+      "complexity": "complex",
+      "lineCount": 230
+    },
+    {
+      "id": "function:src/engine.py:_resolve_default_model",
+      "type": "function",
+      "name": "_resolve_default_model",
+      "filePath": "src/engine.py",
+      "summary": "Discovers and prioritizes local cached model weights before falling back to HuggingFace hub.",
+      "tags": [
+        "model-loading",
+        "path-resolution",
+        "fallback"
+      ],
+      "complexity": "simple",
+      "lineCount": 15
+    },
+    {
+      "id": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "class",
+      "name": "SentimentInferenceEngine",
+      "filePath": "src/engine.py",
+      "summary": "Main inference engine executing tokenizer encoding, transformer forward passes, syntactic clause extraction, and dual-axis classification.",
+      "tags": [
+        "engine",
+        "classifier",
+        "neural",
+        "transformer"
+      ],
+      "complexity": "complex",
+      "lineCount": 175
+    },
+    {
+      "id": "file:tests/test_engine.py",
+      "type": "file",
+      "name": "test_engine.py",
+      "filePath": "tests/test_engine.py",
+      "summary": "Unit and integration tests verifying SentimentInferenceEngine output schema, empty input handling, and 10-case golden benchmark accuracy.",
+      "tags": [
+        "testing",
+        "pytest",
+        "integration-test",
+        "benchmark"
+      ],
+      "complexity": "moderate",
+      "lineCount": 74
+    },
+    {
+      "id": "function:tests/test_engine.py:test_engine_output_format",
+      "type": "function",
+      "name": "test_engine_output_format",
+      "filePath": "tests/test_engine.py",
+      "summary": "Verifies that engine output dictionary adheres to required keys, types, and probability constraints.",
+      "tags": [
+        "unit-test",
+        "schema-validation"
+      ],
+      "complexity": "simple",
+      "lineCount": 15
+    },
+    {
+      "id": "function:tests/test_engine.py:test_empty_input",
+      "type": "function",
+      "name": "test_empty_input",
+      "filePath": "tests/test_engine.py",
+      "summary": "Tests engine graceful degradation when presented with empty or whitespace-only strings.",
+      "tags": [
+        "unit-test",
+        "edge-case"
+      ],
+      "complexity": "simple",
+      "lineCount": 10
+    },
+    {
+      "id": "function:tests/test_engine.py:test_all_10_golden_benchmark_cases",
+      "type": "function",
+      "name": "test_all_10_golden_benchmark_cases",
+      "filePath": "tests/test_engine.py",
+      "summary": "Tests 100% classification accuracy against the 10 Golden Benchmark cases.",
+      "tags": [
+        "unit-test",
+        "golden-benchmark",
+        "accuracy"
+      ],
+      "complexity": "moderate",
+      "lineCount": 35
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:get_engine",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines engine singleton getter"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:get_class_color",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines terminal color mapping"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:analyze",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines analyze CLI command"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:repl",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines repl CLI command"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:benchmark",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines benchmark CLI command"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "function:cli.py:gui",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines GUI launch CLI command"
+    },
+    {
+      "source": "file:cli.py",
+      "target": "file:src/engine.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Imports SentimentInferenceEngine"
+    },
+    {
+      "source": "function:cli.py:get_engine",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Instantiates and loads inference engine"
+    },
+    {
+      "source": "function:cli.py:analyze",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Calls predict method"
+    },
+    {
+      "source": "function:cli.py:repl",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Calls predict in REPL loop"
+    },
+    {
+      "source": "function:cli.py:benchmark",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "Calls predict across benchmark cases"
+    },
+    {
+      "source": "file:src/engine.py",
+      "target": "function:src/engine.py:_resolve_default_model",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines model resolution helper"
+    },
+    {
+      "source": "file:src/engine.py",
+      "target": "class:src/engine.py:SentimentInferenceEngine",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Defines SentimentInferenceEngine class"
+    },
+    {
+      "source": "file:tests/test_engine.py",
+      "target": "file:src/engine.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "Imports SentimentInferenceEngine"
+    },
+    {
+      "source": "file:src/engine.py",
+      "target": "file:tests/test_engine.py",
+      "type": "tested_by",
+      "weight": 0.5,
+      "description": "Tested by test_engine test suite"
+    },
+    {
+      "source": "file:tests/test_engine.py",
+      "target": "function:tests/test_engine.py:test_engine_output_format",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Contains output format test"
+    },
+    {
+      "source": "file:tests/test_engine.py",
+      "target": "function:tests/test_engine.py:test_empty_input",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Contains empty input test"
+    },
+    {
+      "source": "file:tests/test_engine.py",
+      "target": "function:tests/test_engine.py:test_all_10_golden_benchmark_cases",
+      "type": "contains",
+      "weight": 1.0,
+      "description": "Contains 10 benchmark test"
+    }
+  ]
+}
