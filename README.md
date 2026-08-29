@@ -4,6 +4,8 @@
 
 ---
 
+[![Author Yordanos](https://img.shields.io/badge/Author-Yordanos%20Andargachew-blue.svg)]()
+[![Contact](https://img.shields.io/badge/Contact-%2B251%20952%20190%20305-green.svg)]()
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Framework PySide6](https://img.shields.io/badge/GUI-PySide6%20(Qt6)-41cd52.svg)](https://doc.qt.io/qtforpython-6/)
 [![Model AfriBERTa](https://img.shields.io/badge/Model-AfriBERTa%20Transformer-orange.svg)](https://huggingface.co/Tirsit/amharic-sentiment-afriberta)
@@ -11,6 +13,14 @@
 [![Inference Latency](https://img.shields.io/badge/Latency-35--52ms%20(CPU)-success.svg)]()
 [![Benchmark Accuracy](https://img.shields.io/badge/Golden%20Benchmark-100%25%20Accuracy-gold.svg)]()
 [![License MIT](https://img.shields.io/badge/License-MIT-purple.svg)]()
+
+---
+
+## 👨‍💻 Project Leadership & Authorship
+
+- **Lead Engineer & Author:** **Yordanos Andargachew**
+- **Contact & Inquiries:** `+251 952 190 305` (`0952190305`)
+- **Research Domain:** Low-Resource Semitic NLP, Ethiopic Affective Computing, and Production ML Systems.
 
 ---
 
@@ -164,7 +174,7 @@ pytest tests/ -v
 
 ```
 amh-synth/
-├── README.md                      # Master project overview & documentation hub
+├── README.md                      # Master project overview & documentation hub (Author: Yordanos Andargachew)
 ├── requirements.txt               # Declared Python library dependencies
 ├── cli.py                         # Typer + Rich terminal command-line application
 ├── gui.py                         # PySide6 (Qt6) Modern Desktop Studio application
@@ -243,15 +253,17 @@ Deep-dive documentation and reproducible research notebooks are available in the
 
 ---
 
-## 9. License & Citation
+## 9. Author & License
 
-This project is licensed under the **MIT License** — see the root repository for details.
+- **Lead Engineer & Author:** **Yordanos Andargachew**
+- **Phone / Contact:** `+251 952 190 305` (`0952190305`)
+- **License:** Open Academic & Research License ([MIT License](file:///home/igi/Desktop/ab-d/dev/amh-synth/LICENSE))
 
 ### Citation
 ```bibtex
 @software{amharic_sentiment_studio_2026,
   title = {Amharic Sentiment Intelligence Studio & CLI Engine},
-  author = {Amharic NLP & Sentiment Intelligence Core Engineering Team},
+  author = {Yordanos Andargachew},
   year = {2026},
   url = {https://github.com/Overloadpy/Amharic_Sentiment_Classification-engine}
 }
