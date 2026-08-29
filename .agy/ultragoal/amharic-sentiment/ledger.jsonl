@@ -1,0 +1,9 @@
+{"event": "subgoal_started", "subgoal_id": "SG-001", "timestamp": "2026-08-29T02:40:15Z"}
+{"event": "files_touched", "files": ["src/preprocessor.py", "tests/test_preprocessor.py"], "timestamp": "2026-08-29T02:40:45Z"}
+{"event": "verify_ran", "command": "pytest tests/test_preprocessor.py -v", "status": "passed", "timestamp": "2026-08-29T02:41:58Z"}
+{"event": "subgoal_passed", "subgoal_id": "SG-001", "timestamp": "2026-08-29T02:42:00Z"}
+{"event": "subgoal_started", "subgoal_id": "SG-002", "timestamp": "2026-08-29T02:42:01Z"}
+{"event": "files_touched", "files": ["src/threshold.py", "tests/test_threshold.py"], "timestamp": "2026-08-29T02:42:02Z"}
+{"event": "verify_ran", "command": "pytest tests/test_threshold.py -v", "status": "passed", "timestamp": "2026-08-29T02:42:03Z"}
+{"event": "subgoal_passed", "subgoal_id": "SG-002", "timestamp": "2026-08-29T02:42:04Z"}
+{"event": "subgoal_started", "subgoal_id": "SG-003", "timestamp": "2026-08-29T02:42:05Z"}

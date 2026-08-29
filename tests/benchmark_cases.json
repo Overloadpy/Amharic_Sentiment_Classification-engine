@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "category": "Positive 1",
+    "text": "አገልግሎቱ በጣም ፈጣንና አስተማማኝ ነው፤ እጅግ በጣም ወደድኩት።",
+    "expected_class": "Positive"
+  },
+  {
+    "id": 2,
+    "category": "Positive 2",
+    "text": "ምርቱ ጥራቱ እጅግ የላቀ ነው፡ ለሁሉም ሰው እመክረዋለሁ! 👍",
+    "expected_class": "Positive"
+  },
+  {
+    "id": 3,
+    "category": "Negative 1",
+    "text": "ምግቡ ፈጽሞ አይበላም፡ ገንዘቤን በከንቱ ነው ያባከንኩት።",
+    "expected_class": "Negative"
+  },
+  {
+    "id": 4,
+    "category": "Negative 2",
+    "text": "ደንበኛ አያያዛቸው እጅግ በጣም ያናድዳል፡ ዳግመኛ አልመለስም።",
+    "expected_class": "Negative"
+  },
+  {
+    "id": 5,
+    "category": "Neutral 1",
+    "text": "ስብሰባው ነገ ከሰዓት በስምንት ሰዓት በዋናው አዳራሽ ይካሄዳል።",
+    "expected_class": "Neutral"
+  },
+  {
+    "id": 6,
+    "category": "Neutral 2",
+    "text": "የኢትዮጵያ ብሔራዊ ባንክ አዲሱን የውጭ ምንዛሬ መመሪያ ይፋ አደረገ።",
+    "expected_class": "Neutral"
+  },
+  {
+    "id": 7,
+    "category": "Mixed 1",
+    "text": "ስልኩ ውበትና ምርጥ ካሜራ አለው ግን ባትሪው በፍጥነት ያልቃል።",
+    "expected_class": "Mixed"
+  },
+  {
+    "id": 8,
+    "category": "Mixed 2",
+    "text": "ሆቴሉ በጣም ያምራል ሰራተኞቹ ግን ጨዋነት የላቸውም።",
+    "expected_class": "Mixed"
+  },
+  {
+    "id": 9,
+    "category": "Slang Pos",
+    "text": "ቪዲዮው በእውነት ይመቻል፡ አሪፍ ስራ ነው ባክህ! 🔥",
+    "expected_class": "Positive"
+  },
+  {
+    "id": 10,
+    "category": "Slang Neg",
+    "text": "ዋጋው ጭስ ነው፡ ሰው እንዴት እንዲህ ይበዘበዛል ባክህ።",
+    "expected_class": "Negative"
+  }
+]

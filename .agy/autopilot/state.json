@@ -1,0 +1,22 @@
+{
+  "mode": "autopilot",
+  "active": true,
+  "current_phase": "ultragoal",
+  "phase_cycle": [
+    "deep-interview",
+    "ralplan",
+    "ultragoal",
+    "code-review",
+    "ultraqa"
+  ],
+  "iteration": 1,
+  "goal": "Execute the autopilot instructions located in AUTOPILOT_INSTRUCTIONS.md to build the full Amharic Sentiment Classification engine and CLI harness.",
+  "handoffs": {
+    "deepInterview": ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
+    "ralplan": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+    "ultragoal": null,
+    "codeReview": null,
+    "ultraqa": null
+  },
+  "return_to_ralplan_reason": null
+}

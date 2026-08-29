@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "goal": "Build full Amharic Sentiment Classification engine and CLI harness",
+  "planPath": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
+  "activeSubgoalId": "SG-003",
+  "subgoals": [
+    {
+      "id": "SG-001",
+      "title": "Deterministic Preprocessor & Normalization Unit Tests",
+      "acceptanceCriteria": [
+        "Unifies Ha series (ሐ/ኀ -> ሀ)",
+        "Unifies Sa series (ሠ -> ሰ)",
+        "Unifies Glottal series (ዐ -> አ)",
+        "Unifies Tsa series (ፀ -> ጸ)",
+        "Reduces Labiovelars (ቈ/ኰ/ጐ/ዀ)",
+        "Maps Ge'ez punctuation to ASCII",
+        "Collapses character elongation and whitespace",
+        "Passes pytest tests/test_preprocessor.py"
+      ],
+      "passes": true
+    },
+    {
+      "id": "SG-002",
+      "title": "Decoupled Dual-Axis Thresholding & Calibration Math",
+      "acceptanceCriteria": [
+        "Mixed classification with delta_mix margin",
+        "Neutral classification under tau_act",
+        "Positive / Negative dominance margin delta_dom",
+        "Exact confidence percentage calculation according to specs",
+        "Passes unit tests for threshold math"
+      ],
+      "passes": true
+    },
+    {
+      "id": "SG-003",
+      "title": "Afro-XLMR Sentiment Inference Engine",
+      "acceptanceCriteria": [
+        "Loads Davlan/afro-xlmr-base with lazy loading",
+        "Auto-detects CUDA / MPS / CPU",
+        "Outputs dictionary with class, confidence, p_pos, p_neg, cleaned_text, latency_ms",
+        "Processes text deterministically"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SG-004",
+      "title": "10 Golden Benchmark Cases and Engine Tests",
+      "acceptanceCriteria": [
+        "tests/benchmark_cases.json with 10 golden cases",
+        "tests/test_engine.py passes 100%"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SG-005",
+      "title": "Typer + Rich CLI Test Harness",
+      "acceptanceCriteria": [
+        "Single-shot analyze command outputs Rich table",
+        "Interactive repl command supports continuous prompts and :exit",
+        "Benchmark command runs 10 golden cases and prints summary table"
+      ],
+      "passes": false
+    },
+    {
+      "id": "SG-006",
+      "title": "Full Verification & Acceptance Gates",
+      "acceptanceCriteria": [
+        "pytest tests/ passes 100%",
+        "python cli.py analyze 'ምግቡ ፈጽሞ አይበላም' returns Negative",
+        "python cli.py benchmark completes with summary"
+      ],
+      "passes": false
+    }
+  ],
+  "verifyEvidencePath": null,
+  "complete": false
+}
