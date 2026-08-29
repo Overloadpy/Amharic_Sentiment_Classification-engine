@@ -1,8 +1,0 @@
-{
-  "schemaVersion": 1,
-  "verdict": "approve",
-  "planPath": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
-  "architectNotes": "Comprehensive plan covering all modules (preprocessor, threshold, engine, tests, cli) according to AUTOPILOT_INSTRUCTIONS.md.",
-  "criticNotes": "All acceptance criteria, edge cases, and golden test cases are covered. Plan is sound and approved for execution.",
-  "blockedReason": null
-}

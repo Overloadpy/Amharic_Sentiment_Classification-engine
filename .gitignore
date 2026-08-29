@@ -1,6 +1,19 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Pytest / Testing caches
 .pytest_cache/
 .cache/
 *.log
+
+# Agent & Local Analysis Artifacts
+.agy/
+.ua/
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+.venv/
+env/
