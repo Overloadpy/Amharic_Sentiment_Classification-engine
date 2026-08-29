@@ -206,5 +206,17 @@ def benchmark(
     console.print(summary_panel)
 
 
+@app.command()
+def gui() -> None:
+    """Launch the modern Amharic Sentiment Intelligence Studio Desktop GUI."""
+    try:
+        from gui import main as launch_gui
+        console.print("[bold green]Launching Amharic Sentiment Intelligence Studio...[/bold green]")
+        launch_gui()
+    except Exception as e:
+        console.print(f"[bold red]Failed to launch GUI:[/bold red] {e}")
+        raise typer.Exit(code=1)
+
+
 if __name__ == "__main__":
     app()
