@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "verdict": "PASS",
+  "clean": true,
+  "skipped": false,
+  "reason": null,
+  "qaPath": ".agy/qa/ultraqa-amharic-sentiment-20260829T024700Z.md",
+  "defects": [],
+  "returnToRalplanReason": null
+}

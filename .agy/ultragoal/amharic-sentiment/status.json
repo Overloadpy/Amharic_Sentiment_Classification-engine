@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "goal": "Build full Amharic Sentiment Classification engine and CLI harness",
   "planPath": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
-  "activeSubgoalId": "SG-003",
+  "activeSubgoalId": "SG-006",
   "subgoals": [
     {
       "id": "SG-001",
@@ -40,7 +40,7 @@
         "Outputs dictionary with class, confidence, p_pos, p_neg, cleaned_text, latency_ms",
         "Processes text deterministically"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "SG-004",
@@ -49,7 +49,7 @@
         "tests/benchmark_cases.json with 10 golden cases",
         "tests/test_engine.py passes 100%"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "SG-005",
@@ -59,7 +59,7 @@
         "Interactive repl command supports continuous prompts and :exit",
         "Benchmark command runs 10 golden cases and prints summary table"
       ],
-      "passes": false
+      "passes": true
     },
     {
       "id": "SG-006",
@@ -69,9 +69,9 @@
         "python cli.py analyze 'ምግቡ ፈጽሞ አይበላም' returns Negative",
         "python cli.py benchmark completes with summary"
       ],
-      "passes": false
+      "passes": true
     }
   ],
-  "verifyEvidencePath": null,
-  "complete": false
+  "verifyEvidencePath": ".agy/ultragoal/amharic-sentiment/handoff.json",
+  "complete": true
 }

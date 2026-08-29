@@ -1,7 +1,7 @@
 {
   "mode": "autopilot",
-  "active": true,
-  "current_phase": "ultragoal",
+  "active": false,
+  "current_phase": "complete",
   "phase_cycle": [
     "deep-interview",
     "ralplan",
@@ -14,9 +14,9 @@
   "handoffs": {
     "deepInterview": ".agy/specs/deep-interview-amharic-sentiment-20260829T023900Z.md",
     "ralplan": ".agy/plans/ralplan-amharic-sentiment-20260829T023900Z.md",
-    "ultragoal": null,
-    "codeReview": null,
-    "ultraqa": null
+    "ultragoal": ".agy/ultragoal/amharic-sentiment/handoff.json",
+    "codeReview": ".agy/reviews/code-review-amharic-sentiment-verdict.json",
+    "ultraqa": ".agy/qa/ultraqa-amharic-sentiment-verdict.json"
   },
   "return_to_ralplan_reason": null
 }
